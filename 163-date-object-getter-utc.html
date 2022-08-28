@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Object Getter UTC</title>
+</head>
+<body>
+    <h1>Date Object Getter UTC</h1>
+    <script>
+        let foo = new Date();
+        console.info(foo.toISOString());
+        console.info(foo.toJSON());
+        console.info(foo.toUTCString());
+        console.info(foo.valueOf());
+        console.info(foo.getTime());
+
+        console.info('===============');
+        let bar = new Date();
+        console.log( bar.getUTCFullYear() );
+        console.log( bar.getUTCMonth() );
+        console.log( bar.getUTCDate() );
+        console.log( bar.getUTCDay());
+        console.log( bar.getUTCHours());
+        console.log( bar.getUTCMinutes() );
+        console.log( bar.getUTCSeconds() );
+        console.log( bar.getUTCMilliseconds()); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Instance Method toPrecision</title>
+</head>
+<body>
+    <h1>Number Instance Method toPrecision</h1>
+    <script>
+        let foo = 5000.123456789;
+
+        console.info(foo.toPrecision());
+        console.info(foo.toPrecision(1));
+        console.info(foo.toPrecision(5));
+        console.info(foo.toPrecision(10));
+        console.info(foo.toPrecision(20));
+        console.info(4.32745).toPrecision(2);
+        console.info(500).toPrecision(7);
+        console.info(1.23e+6).toPrecision(7);
+    </script>
+</body>
+</html>

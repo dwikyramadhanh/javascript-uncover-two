@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation</title>
+</head>
+<body>
+    <h1>Event Propagation</h1>
+    <div>
+        <h2>Belajar <em>JavaScript</em></h2>
+    </div>
+    <script>
+        let emNode = document.querySelector('em');
+        let h1Node = document.querySelector('h2');
+        let divNode = document.querySelector('div');
+
+        // const tampilkanEm = () => {
+        //     console.info('Tag em di klik');
+        // }
+        // const tampilkanH1 = () => {
+        //     console.info('Tag h1 di klik');
+        // } 
+        // const tampilkanDiv = () => {
+        //     console.info('Tag div di klik');
+        // }
+
+        // divNode.addEventListener('click', tampilkanDiv, true);
+        // emNode.addEventListener('click', tampilkanEm, true);
+        // h1Node.addEventListener('click', tampilkanH1, true);
+
+        // Propagation stop
+        const tampilkanEm = (e) => {
+            console.info('Tag em di klik');
+            e.stopPropagation();
+        }
+        const tampilkanH1 = () => {
+            console.info('Tag h1 di klik');
+        } 
+        const tampilkanDiv = () => {
+            console.info('Tag div di klik');
+        }
+
+        divNode.addEventListener('click', tampilkanDiv);
+        emNode.addEventListener('click', tampilkanEm);
+        h1Node.addEventListener('click', tampilkanH1);
+    </script>
+</body>
+</html>

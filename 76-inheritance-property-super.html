@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance Property Super</title>
+</head>
+<body>
+    <h1>Inheritance Property Super</h1>
+    <script>
+        class Mobil {
+            constructor(nama) {
+                this.nama = nama;
+            }
+            infoMobil() {
+                return `Mobil ${this.nama}`;
+            }
+        }
+
+        class Bus extends Mobil {
+            constructor(nama) {
+                super(nama);
+            }
+            infoBus() {
+                return `Bus ${this.nama}`
+            }
+        }
+
+        let busDwiky = new Bus('Scania K360TB');
+        console.info(busDwiky.infoBus());
+        console.info(busDwiky.infoMobil());
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Radio</title>
+</head>
+<body>
+    <h1>Form Radio</h1>
+    <p>Belajar:
+        <input type="radio" name="belajar" id="belajarHTML" value="HTML">
+        <label for="belajarHTML">HTML</label>
+        <input type="radio" name="belajar" id="belajarCSS" value="CSS">
+        <label for="belajarCSS">CSS</label>
+        <input type="radio" name="belajar" id="belajarJS" value="JavaScript">
+        <label for="belajarJS">JS</label>
+    </p>
+    <p><button id="periksa">Periksa</button></p>
+    <p>Hasil: <span id="hasil"></span></p>
+    <script>
+        let belajarHTMLNode = document.getElementById('belajarHTML');
+        let belajarCSSNode = document.getElementById('belajarCSS');
+        let belajarJSNode = document.getElementById('belajarJS');
+        let periksaNode = document.getElementById('periksa');
+        let hasilNode = document.getElementById('hasil');
+
+        const diPeriksa = () => {
+        hasilNode.innerHTML = '';
+        if(belajarHTMLNode.checked) {
+            hasilNode.innerHTML = belajarHTMLNode.value + ' ';
+        }
+        if(belajarCSSNode.checked) {
+            hasilNode.innerHTML = belajarCSSNode.value + ' ';
+        }
+        if(belajarJSNode.checked) {
+            hasilNode.innerHTML = belajarJSNode.value + ' ';
+        }
+        }
+        periksaNode.addEventListener('click', diPeriksa);
+    </script>
+</body>
+</html>

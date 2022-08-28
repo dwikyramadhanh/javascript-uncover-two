@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .hijau {
+            color: green;
+        }
+        .merah {
+            color: red;
+        }
+    </style>
+    <title>Element Node Object Element Class Name</title>
+</head>
+<body>
+    <h1>Element Node Object Element Class Name</h1>
+    <h2 id="judul" class="merah">Belajar JavaScript</h2>
+    <script>
+        let judulNode = document.getElementById('judul');
+        console.info(judulNode.className);
+
+        judulNode.className = 'hijau';
+        console.info(judulNode.className);
+    </script>
+</body>
+</html>

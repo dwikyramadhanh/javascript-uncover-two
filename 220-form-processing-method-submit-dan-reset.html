@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        span {
+            background-color: aquamarine; 
+            padding: 5px 20px; 
+            cursor: pointer;
+        }
+    </style>
+    <title>Form Processing Method Submit dan Reset</title>
+</head>
+<body>
+    <h1>Form Processing Method Submit dan Reset</h1>
+    <form id="formKu" name="formKu" method="get" action="proses.php">
+        <p>Username: <input type="text" name="username" id="username"></p>
+    </form>
+    <p>
+        <span id="spanSubmit">Submit Form</span>
+        <span id="spanReset">Reset Form</span>
+    </p>
+    <script>
+        let formNode = document.getElementById('formKu');
+        let spanSubmitNode = document.getElementById('spanSubmit');
+        let spanResetNode = document.getElementById('spanReset');
+
+        spanSubmitNode.addEventListener('click', () => { formNode.submit() });
+        spanResetNode.addEventListener('click', () => { formNode.reset() }); 
+    </script>
+</body>
+</html>

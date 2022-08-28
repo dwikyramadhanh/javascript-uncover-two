@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Query Selector All</title>
+</head>
+<body>
+    <h1>Document Query Selector All</h1>
+    <h2>Belajar JavaScript</h2>
+    <ol>
+        <li>Belajar HTML</li>
+        <li>Belajar CSS</li>
+        <li>Belajar JS</li>
+        <li>Belajar PHP</li>
+        <li>Belajar MySQL</li>
+    </ol>
+    <script>
+        // let kumpulanNode = document.querySelectorAll('li');
+        let kumpulanNode = document.querySelectorAll('li:nth-child(even)');
+        console.info(kumpulanNode);
+        console.info(kumpulanNode.length);
+
+        for (let isiNode of kumpulanNode) {
+            isiNode.textContent = 'Belajar Document Object';
+        }
+    </script>
+</body>
+</html>

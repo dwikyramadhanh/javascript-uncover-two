@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Function decodeURI dan decodeURIComponent</title>
+</head>
+<body>
+    <h1>Global Function decodeURI dan decodeURIComponent/h1>
+    <script>
+        let foo = "https://www.duniailkom.com/Belajar%20#JavaScript";
+        let bar = "https%3A%2F%2Fwww.duniailkom.com%2FBelajar%20%23JavaScript";
+        console.log( decodeURI(foo) );
+        console.log( decodeURIComponent(bar) );
+    </script>
+</body>
+</html>

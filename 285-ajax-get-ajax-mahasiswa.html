@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Get Ajax Mahasiswa</title>
+</head>
+<body>
+    <h1>Ajax Get Ajax Mahasiswa</h1>
+    <p>Nama Mahasiswa:
+        <select name="namaMahasiswa" id="namaMahasiswa"></select>
+    </p>
+    <script>
+        let namaMahasiswaNode = document.getElementById('namaMahasiswa');
+        const generateMahasiswa = () => {
+            let request = new XMLHttpRequest();
+            request.open('GET', 'ajax/nama_mahasiswa.php', false);
+            request.send();
+            namaMahasiswaNode.innerHTML = request.responseText;
+        }
+        generateMahasiswa();
+    </script>
+</body>
+</html>

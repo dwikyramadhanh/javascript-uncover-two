@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perulangan For Of</title>
+</head>
+<body>
+    <h1>Perulangan For Of</h1>
+    <script>
+        // For of array
+        // let siswa = ['dwiky', 'ayu', 'putri', 'bagas', 'bayu', 'nadya', 'alyssa'];
+        // for (let i of siswa) {
+        //     console.info (`Hallo nama saya ${i}`);
+        // }
+
+        // For of set
+        // let siswaSet = new Set(['dwiky', 'ayu', 'putri', 'bagas', 'bayu', 'nadya', 'alyssa']);
+        // for (let siswa of siswaSet) {
+        //     console.info(siswa);
+        // }
+
+        // For of map
+        // let siswaMap = new Map([
+        //     ['satu', 'dwiky'],
+        //     ['dua', 'ayu'],
+        //     ['tiga', 'putri'],
+        //     ['empat', 'bagas'],
+        //     ['lima', 'bayu'],
+        //     ['enam', 'nadya'],
+        //     ['tujuh', 'alyssa'],    
+        // ]);
+        // for (let siswa of siswaMap) {
+        //     console.info(siswa);
+        // }
+
+    let siswaMap = new Map([
+            ['satu', 'dwiky'],
+            ['dua', 'ayu'],
+            ['tiga', 'putri'],
+            ['empat', 'bagas'],
+            ['lima', 'bayu'],
+            ['enam', 'nadya'],
+            ['tujuh', 'alyssa'],    
+        ]);
+        for (let siswa of siswaMap) {
+            console.info(`Siswa ke ${siswa[0]} adalah ${siswa[1]}`);
+        }
+    </script>
+</body>
+</html>

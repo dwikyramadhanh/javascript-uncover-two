@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Call dan Apply</title>
+</head>
+<body>
+    <h1>Method Call dan Apply</h1>
+    <script>
+        // const cekJudul = function() {
+        //     return this.judul;
+        // }
+        // let buku1 = {
+        //     judul: 'JavaScript Uncover',
+        // }
+        // let buku2 = {
+        //     judul: 'React Uncover',
+        // }
+
+        // console.info(cekJudul.call(buku1));
+        // console.info(cekJudul.apply(buku1));
+
+        // console.info(cekJudul.call(buku2));
+        // console.info(cekJudul.apply(buku2));
+
+        // Call apply parameter
+        const tambah = function(a, b) {
+            return this.num + a + b;
+        };
+        let obj = {
+            num: 10,
+        }
+        console.info(tambah.call(obj,5,7));
+        console.info(tambah.apply(obj,[5,7]));
+    </script>
+</body>
+</html>

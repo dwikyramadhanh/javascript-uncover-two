@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Prototype Sort</title>
+</head>
+<body>
+    <h1>Array Prototype Sort</h1>
+    <script>
+        let foo = ['dwiky', 'nadya', 'andi', 'dani', 'bayu'];
+        foo.sort();
+        console.info(foo);
+
+        let bar = [3,5,2,8,1,31,22,44,33,11];
+        bar.sort();
+        console.info(bar);
+
+        // Cara 1
+        // const bandingkan = (a, b) => {
+        //     if (a < b) {
+        //         return -1; // a lebih kecil
+        //     }
+        //     if (a > b) {
+        //         return 1; // b lebih kecil
+        //     }
+        //     return 0; // sama besar
+        // }
+        // let baz = [3,5,2,8,1,31,22,44,33,11];
+        // baz.sort(bandingkan);
+        // console.info(baz);
+
+        // Cara 2
+        const bandingkan = (a, b) => a - b;
+        let bax = [3,5,2,8,1,31,22,44,33,11];
+        bax.sort(bandingkan);
+        console.log(bax);
+    </script>
+</body>
+</html>

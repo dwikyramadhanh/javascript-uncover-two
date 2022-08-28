@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Weakset</title>
+</head>
+<body>
+    <h1>Tipe Data Weakset</h1>
+    <script>
+        let siswa = new WeakSet();
+        let andi = {nama: 'andi'}
+        let putri = {nama: 'putri'}
+        let nadya = {nama: 'nadya'}
+
+        // Tambah Element
+        siswa.add(andi);
+        siswa.add(putri);
+        siswa.add(nadya);
+
+        console.info(siswa);
+
+        // Check Element
+        console.info(siswa.has(andi)); // true
+        console.info(siswa.has(putri)); // true
+
+        console.info(siswa.size); // undefined
+
+        // Hapus Element 
+        siswa.delete(nadya);
+        console.info(siswa);
+    </script>
+</body>
+</html>

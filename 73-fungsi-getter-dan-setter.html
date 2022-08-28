@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fungsi Getter dan Setter</title>
+</head>
+<body>
+    <h1>Fungsi Getter dan Setter</h1>
+    <script>
+        class Mobil {
+            constructor(nama, tipe, harga) {
+                this.nama = nama;
+                this.tipe = tipe;
+                this.harga = harga;
+            }
+            get namaMobil() {
+                return this.nama.toUpperCase();
+            }
+            set namaMobil(x) {
+                this.nama = `Mobil ${x}`;
+            }
+        }
+
+        let mobilDwiky = new Mobil('mitsubishi pajero sport', 'suv', 500000000);
+        console.info(mobilDwiky.namaMobil);
+
+        mobilDwiky.namaMobil = 'toyota fortuner';
+        console.info(mobilDwiky.namaMobil);
+    </script>
+</body>
+</html>

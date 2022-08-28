@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Function parseFloat</title>
+</head>
+<body>
+    <h1>Global Function parseFloat</h1>
+    <script>
+        let foo = '1234';
+        console.log( typeof foo );
+
+        foo = parseFloat(foo) ;
+        console.log( foo );
+        console.log( typeof foo );
+        
+        let bar = '-1234.5678';
+        console.log( typeof bar );
+        bar = parseFloat(bar) ;
+        console.log( bar );
+        console.log( typeof bar );
+        console.log( parseFloat('12.045 potong ayam') );
+        console.log( parseFloat('Ada 12.045 potong ayam') );
+    </script>
+</body>
+</html>

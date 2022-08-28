@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Text Area Kota Enter</title>
+</head>
+<body>
+    <h1>Form Text Area Kota Enter</h1>
+    <p>Nama Kota: <input type="text" id="namaKota"></p>
+    <p><textarea id="daftarKota" rows="5" cols="20"></textarea></p>
+    <script>
+        let namaKotaNode = document.getElementById('namaKota');
+        let daftarKotaNode = document.getElementById('daftarKota');
+
+        const tambahKota = (e) => {
+            if (e.key ==='Enter') {
+                daftarKotaNode.value += namaKotaNode.value + '\n';
+                namaKotaNode.value = '';
+                namaKotaNode.focus();
+            }
+        }
+        namaKotaNode.addEventListener('keypress', tambahKota);
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    #container {
+        display: flex;
+        justify-content: center;
+        height: 320px;
+    }
+    div {
+        text-align: center;
+    }
+    img {
+        margin: 10px;
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 3px 3px;
+    }
+    figcaption {
+        text-align: center;
+        background-color: gainsboro;
+        font-size: 1.5em;
+        padding: 10px 20px;
+        margin: 15px 0;
+        box-shadow: 12px 12px 0px black;
+    }
+    button {
+        background-color: white;
+        cursor: pointer;
+        padding: 10px 20px;
+        font-weight: bold;
+        border: 1px solid gray;
+        box-shadow: 2px 2px 2px black;
+        margin: 10px;
+    }
+    button:hover {
+        box-shadow: 1px 1px 1px black;
+        background-color: #f1f1f1;
+    }
+    </style>
+    <title>Case Study Menampilkan Data API</title>
+</head>
+<body>
+    <h1>Case Study Menampilkan Data API</h1>
+    <div id="container"></div>
+    <div>
+        <button id="prev">Prev User</button>
+        <button id="next">Next User</button>
+    </div>
+    <script>
+        const myFetch = async (id) => {
+            try {
+                let response = await fetch(`https://reqres.in/api/users/${id}`);
+                if (!response.ok) {
+                    throw new Error(`Terjadi gangguan dengan kode: ${response.status}`);
+                }
+                let data = await response.json();
+                let user = data.data;
+                let displayUser = ``;
+                displayUser += `<div>`;
+                displayUser += `<h1>${user.first_name} ${user.last_name}</h1>`;
+                displayUser += `<figure>`;
+                displayUser += `<img src='${user.avatar}' alt='${user.first_name}' />`;
+                displayUser += `<figcaption>${user.email}</figcaption>`;
+                displayUser += `</figure>`;
+                displayUser += `</div>`;
+                document.getElementById('container').innerHTML = displayUser;
+                // console.info(idCounter);
+            } catch (error) {
+                console.info(error);
+            }
+        }
+        let idCounter = 1;
+        myFetch(idCounter);
+        document.getElementById('prev').addEventListener('click', () => {
+            if (idCounter > 1) {
+                idCounter--;
+            }
+            myFetch(idCounter);
+        });
+
+        document.getElementById('next').addEventListener('click', () => {
+            if (idCounter < 12) {
+                idCounter++;
+            }
+            myFetch(idCounter);
+        });
+    </script>
+</body>
+</html>

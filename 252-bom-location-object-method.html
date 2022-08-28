@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Object Method</title>
+</head>
+<body>
+    <h1>Location Object Method</h1>
+    <button id="tombolAssign">Assign</button>
+    <button id="tombolReload">Reload</button>
+    <button id="tombolReplace">Replace</button>
+    <script>
+        let tombolAssignNode = document.getElementById('tombolAssign');
+        let tombolReloadNode = document.getElementById('tombolReload');
+        let tombolReplaceNode = document.getElementById('tombolReplace');
+
+        tombolAssignNode.addEventListener('click', () => {
+            location.assign('https://www.google.com');
+        });
+
+        tombolReloadNode.addEventListener('click', () => {
+            location.reload();
+            // location.reload(true);
+        });
+
+        tombolReplaceNode.addEventListener('click', () => {
+            location.replace('https://www.facebook.com');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object SetInterval Style</title>
+</head>
+<body>
+    <h1>Window Object SetInterval Style</h1>
+    <h2>Pesan sekarang juga, senin harga naik</h2>
+    <script>
+        let h2Node = document.querySelector('h2');
+        const buatEfek = () => {
+            if (h2Node.style.color === 'red') {
+                h2Node.style.color = 'blue';
+                h2Node.style.fontSize = '30px';
+            } else {
+                h2Node.style.color = 'red';
+                h2Node.style.fontSize = '25px';
+            }
+        }
+        setInterval(buatEfek, 200);
+    </script>
+</body>
+</html>

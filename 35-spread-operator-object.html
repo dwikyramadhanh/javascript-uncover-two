@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator Object</title>
+</head>
+<body>
+    <h1>Spread Operator Object</h1>
+    <script>
+        let mahasiswa = {
+            nama: 'Dwiky',
+            umur: 20,
+            jurusan: 'Teknik Komputer',
+        }
+        let mahasiswa1 = {
+            ...mahasiswa,
+            umur: 22,
+            tempatLahir: 'Bandung',
+        }
+        console.info(mahasiswa1);
+    </script>
+</body>
+</html>

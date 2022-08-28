@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Membatasi Jumlah Karakter</title>
+</head>
+<body>
+    <h1>Regex Membatasi Jumlah Karakter</h1>
+    <script>
+        // let pola = /A{2}1{3}/;
+        // console.info(pola.test('AA111'));
+        // console.info(pola.test('zzAAA111zz'));
+        // console.info(pola.test('A11'));
+        // console.info(pola.test('AA11'));
+        // console.info(pola.test('A1111'));
+
+        // let pola = /A{2}1{2,3}/;
+        // console.log( pola.test('AA111') ); 
+        // console.log( pola.test('zzAAA111zz') );
+        // console.log( pola.test('A11') ); 
+        // console.log( pola.test('AA11') ); 
+        // console.log( pola.test('A1111') ); 
+
+        // let pola = /A{1,}1{3,}/;
+        // console.log( pola.test('AA111') );
+        // console.log( pola.test("'zAAA111zz') ); 
+        // console.log( pola.test('A11') );
+        // console.log( pola.test('AA11') );
+        // console.log( pola.test('A1111') );
+
+        // Regex Latihan
+        // let pola = /[A-Z]{2}[0-9]{1,4}[A-Z]{1,3}/;
+        // console.log( pola.test('BM12345ARA') ); 
+        // console.log( pola.test('BM1234ARA') );
+        // console.log( pola.test('B99XYZ') ); 
+        // console.log( pola.test('BA99XYZ') );
+        // console.log( pola.test('Belajar BA99XYZ') ); 
+
+        // let pola = /^[A-Z0-9]{2,}[z]{2}_$/;
+        // console.log( pola.test('A1zz_') ); 
+        // console.log( pola.test('AABBCCzz_') ); 
+        // console.log( pola.test('_AABBCCzz_') );
+        // console.log( pola.test('ZZ0101zz_') );
+        // console.log( pola.test('ZZ0101_zz_') );
+        // console.log( pola.test('100101zz_') );
+
+        // Regex karakter bintang
+        // let pola = /ab*c/;
+        // console.info(pola.test('abc'));
+        // console.info(pola.test('abbbbbc'));
+        // console.info(pola.test('ac'));
+        // console.info(pola.test('aaaab'));
+
+        // Regex karakter tambah
+        // let pola = /ab+c/;
+        // console.log( pola.test('abc') ); // true
+        // console.log( pola.test('abbbbbc') ); // true
+        // console.log( pola.test('ac') ); // false
+        // console.log( pola.test('aaaab') ); // false
+
+        // Regex karakter tanda tanya
+        let pola = /ab?c/;
+        console.log( pola.test("abc") ); // true
+        console.log( pola.test("abbbbbc") ); // false
+        console.log( pola.test("ac") ); // true
+        console.log( pola.test("aaaab") ); // false
+    </script>
+</body>
+</html>

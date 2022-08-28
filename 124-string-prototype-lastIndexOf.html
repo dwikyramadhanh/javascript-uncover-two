@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Prototype lastIndexOf</title>
+</head>
+<body>
+    <h1>String Prototype lastIndexOf</h1>
+    <script>
+        let foo = 'Belajar JavaScript dari buku JavaScript Uncover';
+        console.info(foo.lastIndexOf('JavaScript'));
+        console.info(foo.lastIndexOf('buku'));
+        console.info(foo.lastIndexOf('Buku'));
+
+        let bar = 'Belajar JavaScript dari buku JavaScript Uncover';
+        console.log(foo.lastIndexOf('JavaScript'));
+        console.log(foo.lastIndexOf('JavaScript',9));
+        console.log(foo.lastIndexOf('JavaScript',7));
+
+        // Case lastIndexOf
+        let baz = "Belajar JavaScript dari buku JavaScript Uncover";
+        let count = 0;
+        let posisi = baz.lastIndexOf('a');
+        while (posisi !== -1) {
+        count++;
+        posisi = baz.lastIndexOf('a', posisi - 1);
+        }
+        console.log (count); // 7
+    </script>
+</body>
+</html>

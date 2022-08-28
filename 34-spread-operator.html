@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <h1>Spread Operator</h1>
+    <script>
+        let nilai1 = ['a', 'b', 'c', 'd'];
+        console.info(nilai1);
+
+        let nilai2 = [1, 2, 3, 4, 5];
+        console.info(nilai2);
+
+        let nilai3 = [...nilai1, 'e', 'f'];
+        console.info(nilai3);
+
+        let nilai4 = [...nilai2, 6, 7];
+        console.info(nilai4);
+
+        let nilai5 = [...nilai2, ...nilai3];
+        console.info(nilai5);
+        
+    </script>
+</body>
+</html>

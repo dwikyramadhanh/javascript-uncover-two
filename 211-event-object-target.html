@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1,h2,div { border: 2px solid black;
+        width: 280px;
+        padding: 10px;
+        text-align: center;
+        color: red;
+        background-color: pink; 
+    }
+    </style>
+    <title>Event Object Target</title>
+</head>
+<body>
+    <h1 id="judul">Belajar HTML</h1>
+    <h2 id="judul2">Belajar CSS</h2>
+    <div id="tagDiv">Belajar JavaScript</div>
+    <p id="placeholder"></p>
+    <script>
+        let h1Node = document.getElementById("judul");
+        let h2Node = document.getElementById("judul2");
+        let divNode = document.getElementById("tagDiv");
+        // let pNode = document.getElementById("placeholder");
+        // const tampilkan = (e) => {
+        //     pNode.innerHTML = `Sedang serius ${e.target.innerHTML}`;
+        // }
+        // h1Node.addEventListener("click",tampilkan);
+        // h2Node.addEventListener("click",tampilkan);
+        // divNode.addEventListener("click",tampilkan);
+
+        // Target bgcolor
+        const tampilkan = (e) => {
+            let idTarget = e.target.getAttribute('id');
+            if (idTarget === 'judul') {
+                e.target.style.backgroundColor = 'yellow';
+            } else if (idTarget === 'judul2') {
+                e.target.style.backgroundColor = 'aqua';
+            } else if (idTarget === 'tagDiv') {
+                e.target.style.backgroundColor = 'silver';
+            }
+        }
+
+        h1Node = addEventListener('click', tampilkan);
+        h2Node = addEventListener('click', tampilkan);
+        divNode = addEventListener('click', tampilkan);
+    </script>
+</body>
+</html>

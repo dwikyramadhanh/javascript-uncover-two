@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Instance Method toString</title>
+</head>
+<body>
+    <h1>Number Instance Method toString</h1>
+    <script>
+        let foo1 = 230;
+        console.info(typeof foo1);
+
+        bar1 = foo1.toString();
+        console.info(typeof bar1);
+        console.info(bar1);
+
+        let foo2 = new Number(230);
+        console.info(typeof foo2);
+        
+        bar2 = foo2.toString();
+        console.info(typeof bar2);
+        console.info(bar2);
+
+        // Number prototype method toString Radix
+        let foo = 230;
+        console.log( foo.toString() ); // 230
+        console.log( foo.toString(2) ); // 11100110
+        console.log( foo.toString(8) ); // 346
+        console.log( foo.toString(16) ); // e6
+        console.log( foo.toString(36) ); // 6e
+    </script>
+</body>
+</html>

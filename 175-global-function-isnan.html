@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Function isNaN</title>
+</head>
+<body>
+    <h1>Global Function isNaN</h1>
+    <script>
+        let foo;
+        foo = 5;
+        console.info(isNaN(foo));
+
+        foo = 5/'a';
+        console.info(isNaN(foo));
+        
+        foo = NaN;
+        console.info(isNaN(foo));
+    </script>
+</body>
+</html>

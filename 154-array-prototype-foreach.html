@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Prototype ForEach</title>
+</head>
+<body>
+    <h1>Array Prototype Foreach</h1>
+    <script>
+        let foo = ['a', 'b', 'c', 'd', 'e'];
+        foo.forEach(function() {console.info(`JavaScript`)});
+        foo.forEach(() => console.info(`JavaScript`));
+        foo.forEach((element) => console.info(element));
+        foo.forEach((element, index) => console.info(`Index ke - ${index}, berisi ${element}`));
+        foo.forEach((element, index, array) => { 
+            console.info(`Index ke - ${index}, berisi ${element}`);
+            console.info(array); 
+        }); 
+
+        const show = (element, index) => {
+            console.info(`Index ke - ${index}, berisi ${element}`);
+        }
+        let bar = ['a', 'b', 'c', 'd', 'e'];
+        bar.forEach(show);
+
+        let baz = ['dwiky', 'nadya', 'putri', 'bagas', 'bayu'];
+        baz.forEach(show);
+        </script>
+</body>
+</html>

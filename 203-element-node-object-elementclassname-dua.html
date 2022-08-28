@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .penting {
+            border: 2px solid black; 
+            width: 300px;
+            text-align: center;
+        }
+        .merah {
+            color: red;
+            padding: 20px;
+        }
+        .warnig {
+            background-color: pink;
+        }
+    </style>
+    <title>Element Node Object Element Class Name Dua</title>
+</head>
+<body>
+    <h1>Element Node Object Element Class Name Dua</h1>
+    <h2 id="judul" class="merah">Belajar JavaScript</h2>
+    <script>
+        let judulNode = document.getElementById('judul');
+        // Cara satu
+        // let namaClass = judulNode.className;
+
+        // judulNode.className = namaClass + 'penting';
+        // console.info(judulNode.className);
+
+        // Cara dua
+        judulNode.className += ' penting';
+        console.info(judulNode.classList);
+    </script>
+</body>
+</html>

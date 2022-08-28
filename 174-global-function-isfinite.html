@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Function isFinite</title>
+</head>
+<body>
+    <h1>Global Function isFinite</h1>
+    <script>
+        let foo;
+        foo = 6;
+        console.info(isFinite(foo));
+
+        foo = 3.21456;
+        console.info(isFinite(foo));
+
+        foo = 'a';
+        console.info(isFinite(foo));
+
+        foo = 1/0;
+        console.info(isFinite(foo));
+
+        foo = Number.NEGATIVE_INFINITY;
+        console.info(isFinite(foo));
+        
+        foo = NaN;
+        console.info(isFinite(foo));
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Conditional</title>
+</head>
+<body>
+    <h1>Operator Conditional</h1>
+    <script>
+        let jumlah_barang = 1000;
+        let total;
+        total = jumlah_barang > 500 ? jumlah_barang * 100 : jumlah_barang * 150;
+        console.info(total);
+
+        let user = 'admin';
+        let hak_akses = user === 'admin' ? true : false;
+        if (hak_akses) {
+            console.info('Selamat datang admin');
+        } else {
+            console.info('Bukan admin');
+        }
+    </script>
+</body>
+</html>

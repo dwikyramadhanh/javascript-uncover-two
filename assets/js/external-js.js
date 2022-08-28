@@ -1,0 +1,1 @@
+document.getElementById('myButton').addEventListener('click', () => document.getElementById('root').innerHTML = 'Hello World');

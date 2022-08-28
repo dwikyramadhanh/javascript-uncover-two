@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Data Error Catch</title>
+</head>
+<body>
+    <h1>Fetch Data Error Catch</h1>
+    <script>
+        fetch('https://reqres.in/api/users/x').then(response => {
+            if (!response.ok) {
+                throw new Error('Terjadi gangguan');
+            }
+            return response.json();
+        }).then(data => console.info(data.data)).catch(error => {
+            console.info(error);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Processing Mencari Form Element</title>
+</head>
+<body>
+    <h1>Form Processing Mencari Form Element</h1>
+    <form id="formKu" name="formKu" method="get" action="proses.php">
+        <p>Username: <input type="text" name="username" id="username"></p>
+        <p><input type="checkbox" name="js" id="js" value="Belajar JavaScript">
+        Belajar JavaScript</p>
+        <p><input type="submit" name="submit" id="submit" value="Kirim Data"></p>
+    </form>
+    <script>
+        let formNode = document.getElementById('formKu');
+        let usernameNode = document.getElementById('username');
+        let jsNode = document.getElementById('js');
+        let submitNode = document.getElementById('submit');
+
+        console.log(formNode);
+        console.log(usernameNode);
+        console.log(jsNode);
+        console.log(submitNode);
+    </script>
+</body>
+</html>

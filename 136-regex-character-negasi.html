@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Character Negasi</title>
+</head>
+<body>
+    <h1>Regex Character Negasi</h1>
+    <script>
+        // let pola = /[^a-e]../;
+        // console.log( pola.test('abaa') ); // false
+        // console.log( pola.test('fba') ); // true
+        // console.log( pola.test('1dd') ); // true
+        // console.log( pola.test('ddd') ); // false
+        // console.log( pola.test(' dd') ); // true
+        // console.log( pola.test('belajar') ); // true
+
+        let pola = /^[a-e]../;
+        console.log( pola.test('abaa') ); // true
+        console.log( pola.test('fba') ); // false
+        console.log( pola.test('1dd') ); // false
+        console.log( pola.test('ddd') ); // true
+        console.log( pola.test(' dd') ); // false
+        console.log( pola.test('belajar') ); // true
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Static Method ParseInt</title>
+</head>
+<body>
+    <h1>Number Static Method ParseInt</h1>
+    <script>
+        let foo = '1234';
+        console.info(typeof foo);
+
+        foo = Number.parseInt(foo);
+        console.info(foo);
+        console.info(typeof foo);
+
+        let bar = '-12345.5678';
+        console.info(typeof bar);
+
+        bar = Number.parseInt(bar);
+        console.info(bar);
+        console.info(typeof bar);
+
+        console.info(Number.parseInt('12.045 potong ayam'));
+        console.info(Number.parseInt('ada 12.045 potong ayam'));
+
+        // Number method parseint radix
+        /* 
+            console.log( Number.parseInt("10101101",2) ); // 173
+            console.log( Number.parseInt("255",8) ); // 173
+            console.log( Number.parseInt("AD",16) ); // 173
+            console.log( Number.parseInt("173",10) ); // 173
+            console.log( Number.parseInt("173 ikan",10) ); // 173
+        */
+    </script>
+</body>
+</html>

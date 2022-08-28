@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Instance Method to LocaleString Dua</title>
+</head>
+<body>
+    <h1>Number Instance Method to LocaleString Dua</h1>
+    <script>
+        let foo = 1234500.346;
+        console.info(foo.toLocaleString('en-US', {style: 'decimal'}));
+        console.info(foo.toLocaleString('en-US', {style: 'percent'}));
+        console.info(foo.toLocaleString('en-US', {style: 'currency', currency: 'USD'}));
+        console.info(foo.toLocaleString('de-DE', {style: 'currency', currency: 'EUR'}));
+        console.info(foo.toLocaleString('ja-JP', {style: 'currency', currency: 'JPY'}));
+        console.info(foo.toLocaleString('id-ID', {style: 'currency', currency: 'IDR'}));
+    </script>
+</body>
+</html>

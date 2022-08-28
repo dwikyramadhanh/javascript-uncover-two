@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Prototype Exec</title>
+</head>
+<body>
+    <h1>Regex Prototype Exec</h1>
+    <script>
+        // let foo = '1 jam sama dengan 60 menit, juga sama dengan 3600 detik';
+        // let pola = /\d+/;
+        // console.info(pola.exec(foo));
+
+        // let foo = "1 jam sama dengan 60 menit, juga sama dengan 3600 detik";
+        // let bar = /\d+/.exec(foo);
+        // console.log( bar[0] ); // 1
+        // console.log( bar.index ); // 0
+        // console.log( bar.input ); // 1 jam sama dengan ... sama dengan 3600 detik
+        // console.log( bar.group ); // undefined
+
+        // Regex exec multiple
+        // let foo = "1 jam sama dengan 60 menit, juga sama dengan 3600 detik";
+        // let pola = /\d+/g;
+        // console.log( pola.exec(foo)[0] ); // 1
+        // console.log( pola.exec(foo)[0] ); // 60
+        // console.log( pola.exec(foo)[0] ); // 3600
+        // console.log( pola.exec(foo)[0] ); // Error: Cannot read properties of null
+
+        // Regex exec all
+        let foo = '1 jam sama dengan 60 menit, juga sama dengan 3600 detik';
+        let pola = /\d+/g;
+        let arrHasil = [];
+        let result;
+        let i = 0;
+
+        while((result = pola.exec(foo)) !== null) {
+            arrHasil[i] = `String ${result[0]} ada di posisi index ${result.index}`;
+            i++;
+        }
+
+        // String Match
+        let bar = '1 jam sama dengan 60 menit. Juga sama dengan 3600 detik';
+        console.info(foo.match(/\d+/g));
+    </script>
+</body>
+</html>

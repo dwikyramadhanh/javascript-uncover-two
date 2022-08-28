@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler dari AddEventListener</title>
+</head>
+<body>
+    <h1>Event Handler dari AddEventListener</h1>
+    <h2 id="judul">Belajar JavaScript</h2>
+    <p></p>
+    <h3></h3>
+    <script>
+        let judulNode = document.getElementById('judul');
+        // judulNode.addEventListener('click', () => { document.querySelector('p').innerHTML = 'Judul di click'; });
+
+        // Banyak event
+        // const tampilkanClick = () => {
+        //     document.querySelector('p').innerHTML = 'Judul di click';
+        // }
+        // const tampilkanDoubleClick = () => {
+        //     document.querySelector('p').innerHTML = 'Judul di double click';
+        // }
+        // const tampilkanContextmenu = () => {
+        //     document.querySelector('p').innerHTML = 'Judul di click kanan';
+        // }
+        // judulNode.addEventListener('click', tampilkanClick);
+        // judulNode.addEventListener('dblclick', tampilkanDoubleClick);
+        // judulNode.addEventListener('contextmenu', tampilkanContextmenu);
+
+        // Menimpa event
+        // judulNode.addEventListener('click', () => {
+        //     document.querySelector('p').innerHTML = 'Judul di click, tampil di p';
+        // });
+        // judulNode.addEventListener('click', () => {
+        //     document.querySelector('h3').innerHTML = 'Judul di click, tampil h3';
+        // });
+
+        // Remove addeventlistener
+        const tampilkanClickP = () => {
+            document.querySelector('p').innerHTML = 'Judul di click, tampil p';
+        }
+        const tampilkanClickH3 = () => {
+            document.querySelector('h3').innerHTML = 'Judul di click, tampil h3';
+        }
+        judulNode.addEventListener('click', tampilkanClickP);
+        judulNode.addEventListener('click', tampilkanClickH3);
+        judulNode.removeEventListener('click', tampilkanClickH3);
+    </script>
+</body>
+</html>

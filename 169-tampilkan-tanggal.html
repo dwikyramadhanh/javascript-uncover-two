@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tampilkan Tanggal</title>
+</head>
+<body>
+    <h1>Tampilkan Tanggal</h1>
+    <script>
+        let foo = new Date();
+        let tahun = foo.getFullYear();
+        let bulan = foo.getMonth();
+        let tanggal = foo.getDate();
+        let hari = foo.getDay();
+        let jam = foo.getHours();
+        let menit = foo.getMinutes();
+        let detik = foo.getSeconds();
+        let namaHari, namaBulan;
+        switch (hari) {
+            case 0 : namaHari = "Minggu"; break;
+            case 1 : namaHari = "Senin"; break;
+            case 2 : namaHari = "Selasa"; break;
+            case 3 : namaHari = "Rabu"; break;
+            case 4 : namaHari = "Kamis"; break;
+            case 5 : namaHari = "Jumat"; break;
+            case 6 : namaHari = "Sabtu"; break;
+        }
+        switch (bulan) {
+            case 0 : namaBulan = "Januari"; break;
+            case 1 : namaBulan = "Februari"; break;
+            case 2 : namaBulan = "Maret"; break;
+            case 3 : namaBulan = "April"; break;
+            case 4 : namaBulan = "Mei"; break;
+            case 5 : namaBulan = "Juni"; break;
+            case 6 : namaBulan = "Juli"; break;
+            case 7 : namaBulan = "Agustus"; break;
+            case 8 : namaBulan = "September"; break;
+            case 9 : namaBulan = "Oktober"; break;
+            case 10 : namaBulan = "November"; break;
+            case 11 : namaBulan = "Desember"; break;
+        }
+        let tampilanTanggal = namaHari+", "+tanggal+" "+namaBulan+" "+tahun;
+        tampilanTanggal += " " + jam + ":" + menit+ ":" + detik;
+        console.log(tampilanTanggal);
+    </script>
+</body>
+</html>

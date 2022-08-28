@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Radio Perulangan</title>
+</head>
+<body>
+    <h1>Form Radio Perulangan</h1>
+    <p>Belajar:
+        <input type="radio" name="belajar" id="belajarHTML" value="HTML">
+        <label for="belajarHTML">HTML</label>
+        <input type="radio" name="belajar" id="belajarCSS" value="CSS">
+        <label for="belajarCSS">CSS</label>
+        <input type="radio" name="belajar" id="belajarJS" value="JS">
+        <label for="belajarJS">JavaScript</label>
+        <input type="radio" name="belajar" id="belajarPHP" value="PHP">
+        <label for="belajarPHP">PHP</label>
+        <input type="radio" name="belajar" id="belajarMYSQL" value="MySQL">
+        <label for="belajarMYSQL">MySQL</label>
+    </p>
+    <p><button id="periksa">Periksa</button></p>
+    <p>Hasil: <span id="hasil"></span></p>
+    <script>
+        let belajarNode = document.querySelectorAll('input');
+        let periksNode = document.getElementById('periksa');
+        let hasilNode = document.getElementById('hasil');
+
+        // Cara satu
+        // const diPeriksa = () => {
+        //     // console.log(belajarNode);
+        //     for (let i = 0; i < belajarNode.length; i++) {
+        //         if (belajarNode[i].checked === true) {
+        //             hasilNode.innerHTML = belajarNode[i].value;
+        //         }
+        //     }
+        // }
+
+        // Cara dua
+        const diPeriksa = () => {
+            belajarNode.forEach((element) => {
+                if (element.checked === true) {
+                    hasilNode.innerHTML = element.value;
+                }
+            });
+        }
+
+        periksNode.addEventListener('click', diPeriksa);
+    </script>
+</body>
+</html>

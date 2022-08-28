@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Processing Input Text Property Value</title>
+</head>
+<body>
+    <form id="formKu" name="formKu" method="get" action="proses.php">
+        <p>Username: <input type="text" name="username" id="username"></p>
+        <p><input type="submit" name="submit" id="submit" value="Submit Form"></p>
+    </form>
+    <!-- <p>Hasil: <span id="hasil"></span></p> -->
+    <p><input type="text" id="hasil"></p>
+    <script>
+        // let formNode = document.getElementById('formKu');
+        // let usernameNode = document.getElementById('username');
+
+        // const diProses = (e) => {
+        //     e.preventDefault();
+        //     document.getElementById('hasil').innerHTML = usernameNode.value;
+        // }
+        // formNode.addEventListener('submit', diProses);
+
+        // Case dua
+        let formNode = document.getElementById('formKu');
+        let usernameNode = document.getElementById('username');
+        let hasilNode = document.getElementById('hasil');
+
+        const diProses = (e) => {
+            e.preventDefault();
+            hasilNode.value = usernameNode.value;
+            hasilNode.disabled = 'true'; 
+        }
+        formNode.addEventListener('submit', diProses);
+    </script>
+</body>
+</html>

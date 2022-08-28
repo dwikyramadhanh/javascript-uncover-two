@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object Case Study Mengirim Teks ke Jendela Lain</title>
+</head>
+<body>
+    <h1>Window Object Case Study Mengirim Teks ke Jendela Lain</h1>
+    <button id="tombolBuka">Buat jendela</button>
+    <button id="tombolTutup">Tutup jendela</button>
+    <p>
+        <textarea id="kodeEdit"></textarea><br>
+        <button id="tombolKirim">Kirim kode</button>
+    </p>
+    <script>
+        let tombolBukaNode = document.getElementById('tombolBuka');
+        let tombolTutupNode = document.getElementById('tombolTutup');
+        let kodeEditNode = document.getElementById('kodeEdit');
+        let tombolKirimNode = document.getElementById('tombolKirim');
+        let myJendela;
+
+        const jendelaBaru = () => {
+        let setting = "width=800,height=300";
+            myJendela = open("","jendelaBaru",setting);
+        }
+        const kirimkanKode = () => {
+            myJendela.document.write(kodeEditNode.value);
+        }
+        const tutupJendela = () => {
+            myJendela.close();
+        }
+        tombolBukaNode.addEventListener("click", jendelaBaru);
+        tombolKirimNode.addEventListener("click", kirimkanKode);
+        tombolTutupNode.addEventListener("click", tutupJendela);
+    </script>
+</body>
+</html>

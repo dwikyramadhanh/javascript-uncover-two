@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menangkap Error Object</title>
+</head>
+<body>
+    <h1>Menangkap Error Object</h1>
+    <script>
+        try {
+            console.info(foo);
+        } 
+        catch(e) {
+            console.info(e.name);
+            console.info(e.message);
+            console.info(e);
+        }
+        try{
+            console.log(foo);
+        }
+        catch(e){
+            console.log(`Ada ${e.name} dengan pesan "${e.message}"`);
+        }
+    </script>
+</body>
+</html>

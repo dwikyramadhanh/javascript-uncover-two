@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Instance Method toFixed</title>
+</head>
+<body>
+    <h1>Number Instance Method toFixed</h1>
+    <script>
+        let foo = 5000.123456789;
+        console.info(foo.toFixed());
+        console.info(foo.toFixed(1));
+        console.info(foo.toFixed(5));
+        console.info(foo.toFixed(10));
+        console.info(foo.toFixed(20));
+
+        console.info(4.32745.toFixed(2));
+        console.info((500).toFixed(2));
+        console.info((1.23e+6).toFixed(2));
+    </script>
+</body>
+</html>

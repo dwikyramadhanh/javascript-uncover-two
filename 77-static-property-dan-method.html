@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Property dan Method</title>
+</head>
+<body>
+    <h1>Static Property dan Method</h1>
+    <script>
+        // class Mobil {
+        //     static warna = 'biru';
+        //     static infoMobil() {
+        //         return 'Ini dari class mobil';
+        //     }
+        // }
+
+        // console.info(Mobil.warna);
+        // console.info(Mobil.infoMobil());
+
+        // let mobilDwiky = new Mobil();
+        // console.info(mobilDwiky.warna); // undefined
+        // console.info(mobilDwiky.infoMobil()); // mobilDwiky.infoMobil is not a function
+
+        // Static counter
+        class Mobil {
+            static jumlahMobil = 0;
+            constructor() {
+                Mobil.jumlahMobil++;
+            }
+        }
+
+        let mobilDwiky = new Mobil();
+        let mobilPutri = new Mobil();
+        let mobilNadya = new Mobil();
+
+        console.info(`total mobil: ` + Mobil.jumlahMobil); // total mobil: 3
+    </script>
+</body>
+</html>

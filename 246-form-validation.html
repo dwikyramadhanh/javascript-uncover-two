@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .error {
+        background-color: pink;
+        border: 1px solid red;
+        width: 300px;
+        text-align: center;
+        padding: 5px;
+        }
+    </style>
+    <title>Form Validation</title>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <p id="pesan"></p>
+    <form id="formKu" name="formKu" method="get" action="proses.php">
+        <p>Username: <input type="text" name="username" id="username"></p>
+        <p><input type="submit" name="submit" id="submit" value="Kirim Data"></p>
+    </form>
+    <script>
+        let formKuNode = document.getElementById('formKu');
+        let usernameNode = document.getElementById('username');
+        let pesanNode = document.getElementById('pesan');
+        const diProses = (e) => {
+            if (usernameNode.value.trim() === '') {
+                pesanNode.innerHTML = 'Username harus diisi';
+                pesanNode.className = 'error';
+                e.preventDefault();
+            }
+            else if (/\W/.test(usernameNode.value.trim())){
+                pesanNode.innerHTML = "Hanya bisa diisi karakter alfanumerik";
+                pesanNode.className = "error";
+                e.preventDefault();
+            } else if (usernameNode.value.trim().length < 6 ){
+                pesanNode.innerHTML = "Minimal diisi 6 karakter";
+                pesanNode.className = "error";
+                e.preventDefault();
+            }
+        }
+        formKuNode.addEventListener('submit', diProses);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Character Set</title>
+</head>
+<body>
+    <h1>Regex Character Set</h1>
+    <script>
+        // let pola = /[abcde]../;
+        // console.log( pola.test('abaa') ); // true
+        // console.log( pola.test('fba') ); // false
+        // console.log( pola.test('1dd') ); // false
+        // console.log( pola.test('add') ); // true
+        // console.log( pola.test(' dd') ); // false
+        // console.log( pola.test('belajar') ); // true
+
+        let pola = /^[a-e][1-9][R-Z]./;
+        console.log( pola.test("a9R") ); // false
+        console.log( pola.test("a9Ra") ); // true
+        console.log( pola.test("fa9Ra") ); // false
+        console.log( pola.test("e9ZA") ); // true
+        console.log( pola.test("e9ZAAAAA") ); // true
+    </script>
+</body>
+</html>

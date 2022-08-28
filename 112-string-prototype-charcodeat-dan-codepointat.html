@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Prototype CharCodeAt dan CodePointAt</title>
+</head>
+<body>
+    <h1>String Prototype CharCodeAt dan CodePointAt</h1>
+    <script>
+        let foo = "Belajar JavaScript";
+        console.log(foo.charCodeAt(1));
+        console.log(foo.charCodeAt(8));
+        console.log('Duniailkom'.charCodeAt(4));
+        console.log(foo.codePointAt(1));
+        console.log(foo.codePointAt(8));
+        console.log('Duniailkom'.codePointAt(4));
+
+        let bar = String.fromCodePoint(128656, 128663, 128690);
+        console.log(bar);
+        console.log(bar.charCodeAt(0));
+        console.log(bar.codePointAt(0));
+    </script>
+</body>
+</html>

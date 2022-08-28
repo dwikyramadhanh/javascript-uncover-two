@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melempar Exception</title>
+</head>
+<body>
+    <h1>Melempar Exception</h1>
+    <script>
+        const foo = 101;
+        try {
+            if (foo > 100) {
+                // throw 'Angka foo terlalu besar';
+                // throw new Error('Angka foo terlalu besar');
+                throw new RangeError('Angka foo terlalu besar');
+            }
+        }
+        catch(e) {
+            console.info(e.name);
+            console.info(e.message);
+            console.info(e);
+        }
+
+        // Latihan
+        const cekKabisat = (tahun) => {
+        if(!Number.isInteger(tahun)){
+            throw new TypeError(`${tahun} bukan angka tahun`);
+        }
+        else if(tahun <= 0) {
+            throw new RangeError(`Harus tahun setelah masehi`);
+        }
+        else if(tahun % 4 === 0) {
+            return `${tahun} adalah tahun kabisat`;
+        }
+        else {
+            return `${tahun} bukan tahun kabisat`;
+        }
+        };
+        try {
+            console.log(cekKabisat(2024));
+            console.log(cekKabisat(2022));
+            console.log(cekKabisat(-200));
+            console.log(cekKabisat('a'));
+        }
+        catch(e) {
+        console.log(`Ada ${e.name} dengan pesan "${e.message}"`);
+}
+    </script>
+</body>
+</html>

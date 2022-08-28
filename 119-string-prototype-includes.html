@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Prototype Includes</title>
+</head>
+<body>
+    <h1>String Prototype Includes</h1>
+    <script>
+        let foo = 'Sedang Belajar JavaScript dari buku JavaScript Uncover';
+        console.info(foo.includes('Uncover')); // true
+        console.log(foo.includes('JavaScript')); // true
+        console.log(foo.includes('javascript')); // false
+        console.log(foo.includes('Sedang')); // true
+        console.log(foo.includes('Sedang',1)); // false
+        console.log(foo.includes('edang',1)); // true
+    </script>
+</body>
+</html>

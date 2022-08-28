@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Navigation Object Browser Sniffing</title>
+</head>
+<body>
+    <h1>BOM Navigation Object Browser Sniffing</h1>
+    <button id="tombol">Check Web Browser</button>
+    <p>Web browser anda <span id="hasil"></span></p>
+    <script>
+        let tombolNode = document.getElementById('tombol');
+        let hasilNode = document.getElementById('hasil');
+
+        const periksaWebBrowser = () => {
+            if((navigator.userAgent.indexOf('Opera') != -1) ||
+            (navigator.userAgent.indexOf('OPR') != -1 )) {
+            hasilNode.innerHTML = 'Opera';
+            }
+            else if(navigator.userAgent.indexOf('Edg') != -1 ) {
+            hasilNode.innerHTML = 'Microsoft Edge';
+            }
+            else if(navigator.userAgent.indexOf('Chrome') != -1 ) {
+            hasilNode.innerHTML = 'Google Chrome';
+            }
+            else if(navigator.userAgent.indexOf('Safari') != -1) {
+            hasilNode.innerHTML = 'Apple Safari';
+            }
+            else if(navigator.userAgent.indexOf('Firefox') != -1 ) {
+            hasilNode.innerHTML = 'Mozilla Firefox';
+            }
+            else if((navigator.userAgent.indexOf('MSIE') != -1 ) ||
+            (!!document.documentMode === true )) //IF IE > 10
+            {
+            hasilNode.innerHTML = 'Microsoft Internet Explorer';
+            }
+            else {
+            hasilNode.innerHTML = 'Tidak diketahui';
+            }
+        }
+        tombolNode.addEventListener('click', periksaWebBrowser);
+    </script>
+</body>
+</html>

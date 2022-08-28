@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Case Study SlideShow</title>
+</head>
+<body>
+    <div id="slideshow-container">
+        <a href="https://www.google.com" id="linkshow">
+            <img src="assets/img/gambar0.jpg" alt="#" id="slideshow" width="800" height="400">
+        </a>
+    </div>
+    <nav>
+        <button id="prev"><< Prev</button>
+        <div>
+            <button id="start">Start Slideshow</button>
+            <button id="stop">Stop Slideshow</button>
+        </div>
+        <button id="next">Next >></button>
+    </nav>
+    <script>
+        let slideshowNode = document.getElementById('slideshow');
+        let linkshowNode = document.getElementById('linkshow');
+        let startNode = document.getElementById('start');
+        let stopNode = document.getElementById('stop');
+        let prevNode = document.getElementById('prev');
+        let nextNode = document.getElementById('next');
+
+        let file = 'assets/img/';
+        let arrayGambar = [
+            `${file}gambar0.jpg`,`${file}gambar1.jpg`,`${file}gambar2.jpg`,`${file}gambar3.jpg`,`${file}gambar4.jpg`
+        ];
+        let arrayLink = [
+        'https://www.google.com',
+        'https://www.twitter.com',
+        'https://www.facebook.com',
+        'https://www.bing.com',
+        'https://www.duniailkom.com'
+        ];
+        let counter = 0;
+
+        const nextSlideshow = () => {
+            counter++;
+            if (counter === 5) {
+                counter = 0;
+            }
+            slideshowNode.setAttribute('src', arrayGambar[counter]);
+            linkshowNode.setAttribute('href', arrayLink[counter]);
+        }
+        nextNode.addEventListener('click', nextSlideshow);
+
+        const prevSlideshow = () => {
+            counter--;
+            if (counter === -1) {
+                counter = 4;
+            }
+            slideshowNode.setAttribute('src', arrayGambar[counter]);
+            linkshowNode.setAttribute('href', arrayLink[counter]);
+        }
+        prevNode.addEventListener('click', prevSlideshow);
+
+        let intervalID = 0;
+        const startSlideshow = () => {
+            if (intervalID === 0) {
+                intervalID = setInterval(nextSlideshow, 2000);
+            }
+        }
+
+        const stopSlideshow = () => {
+            clearInterval(intervalID);
+            intervalID = 0;
+        }
+        startNode.addEventListener('click', startSlideshow);
+        stopNode.addEventListener('click', stopSlideshow);
+    </script>
+</body>
+</html>

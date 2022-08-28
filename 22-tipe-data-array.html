@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Array</title>
+</head>
+<body>
+    <h1>Tipe Data Array</h1>
+    <script>
+        let nama = ['dwiky', 'putri', 'nadya', 'bagas', 'bayu'];
+        console.info(nama);
+        console.info(nama[0]);
+        console.info(nama[1]);
+        console.info(nama[2]);
+        console.info(nama[3]);
+        console.info(nama[4]);
+
+        // Mengganti nilai array pada index ke 4
+        nama[4] = 'dani';
+        console.info(nama);
+
+        // Array 2 dimensi
+        let foo = [
+            ['sedang', 'belajar', 'javascript'],
+            ['selamat', 'pagi', 'dunia'],
+            ['a', 'b', 'c', 'd', 'e'],
+        ];
+        console.info(foo[0][2]); // javascript
+        foo[1][1] = 'malam'; 
+        console.info(foo[1]); // ['selamat', 'malam', 'dunia']
+    </script>
+</body>
+</html>

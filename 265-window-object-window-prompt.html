@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object Window Prompt</title>
+</head>
+<body>
+    <h1>Window Object Window Prompt</h1>
+    <h2>Belajar JavaScript</h2>
+    <button id="tombol">Click Me</button>
+    <script>
+        let tombolNode = document.getElementById('tombol');
+        let h2Node = document.querySelector('h2');
+
+        const jalankan = () => {
+            let judulBaru = prompt('Input baru halaman');
+            h2Node.innerHTML = judulBaru;
+        }
+
+        tombolNode.addEventListener('click', jalankan);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Notation</title>
+</head>
+<body>
+    <h1>Arrow Notation</h1>
+    <script>
+        // const kuadrat = (a) => {
+        //     return a * a;
+        // }
+        // console.info(kuadrat(5));
+
+        // const kuadrat = (a) => a * a;
+        // console.info(kuadrat(6));
+
+        const kuadrat = a => a*a;
+        console.info(kuadrat(7));
+
+        // Default parameter arrow function
+        const salam = (kapan = 'pagi', siapa = 'kawan') => `Selamat ${kapan}, ${siapa}`;
+        console.info(salam());
+        console.info(salam('siang'));
+        console.info(salam('malam', 'nadya'));
+    </script>
+</body>
+</html>

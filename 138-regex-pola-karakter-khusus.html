@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Pola Karakter Khusus</title>
+</head>
+<body>
+    <h1>Regex Pola Karakter Khusus</h1>
+    <script>
+        // let pola = /\d\w\s/;
+        // console.info(pola.test('1v '));
+        // console.info(pola.test('3Ba'));
+        // console.info(pola.test('9z '));
+        // console.info(pola.test('1Z'));
+
+        let pola = /www\.....\.com/;
+        console.log( pola.test('www.google.com') );
+        console.log( pola.test('www.abcd.com') );
+        console.log( pola.test('www.xyz1.com') );
+        console.log( pola.test('www.1234.com') );
+
+        // Regex email
+        // let pola = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    </script>
+</body>
+</html>

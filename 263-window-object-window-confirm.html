@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object Window Confirm</title>
+</head>
+<body>
+    <h1>Window Object Window Confirm</h1>
+    <button id="tombol">Click Me</button>
+    <p>Hasil: <span id="hasil"></span></p>
+    <script>
+        let tombolNode = document.getElementById('tombol');
+        let hasilNode = document.getElementById('hasil');
+
+        const jalankan = () => {
+            let sudahPaham = confirm('Anda sudah paham dengan JavaScript');
+            hasilNode.innerHTML = sudahPaham;
+        }
+
+        tombolNode.addEventListener('click', jalankan);
+    </script>
+</body>
+</html>

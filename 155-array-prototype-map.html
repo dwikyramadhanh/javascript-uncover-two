@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Prototype Map</title>
+</head>
+<body>
+    <h1>Array Prototype Map</h1>
+    <script>
+        // let foo = [8,4,7,9,3,2];
+        // let bar = foo.map(
+        //     function (element, index, array) {
+        //         return element * 2;
+        //     }
+        // ) 
+        // console.info(bar);
+
+        // let baz = foo.map((element, index, array) => element * 2);
+        // console.info(baz);
+
+        // const kaliDua = (element, index, array) => element * 2;
+        // let foo = [8,4,7,9,3,2];
+        // let bar = foo.map(kaliDua);
+        // console.info(bar);
+
+        // Latihan satu
+        // const akarKuadrat = (element) => Math.sqrt(element);
+        // let foo = [49,81,4,9,36,121];
+        // let bar = foo.map(akarKuadrat);
+        // console.info(bar);
+
+        // Latihan dua 
+        // const pangkat = (element) => Math.pow(element, 3);
+        // let foo = [8,4,7,9,3,2];
+        // let bar = foo.map(pangkat);
+        // console.info(bar);
+
+        // latihan tiga
+        // const ganjilGenap = (element) => {
+        //     if(element %2 === 0) {
+        //         return element;
+        //     } else {
+        //         return 0;
+        //     }
+        // }
+        // let foo = [8,4,7,9,3,2];
+        // let bar = foo.map(ganjilGenap);
+        // console.info(bar);
+
+        const ganjilGenap = (element) => element %2 === 0 ? element : 0;
+        let foo = [8,4,7,9,3,2];
+        let bar = foo.map(ganjilGenap);
+        console.info(bar);
+    </script>
+</body>
+</html>

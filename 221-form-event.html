@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event</title>
+</head>
+<body>
+    <h1>Form Event</h1>
+    <form id="formKu" name="formKu" method="get" action="proses.php">
+        <p>Username: <input type="text" name="username" id="username"></p>
+        <p>
+        <input type="submit" name="submit" id="submit" value="Submit Form">
+        <input type="reset" name="reset" id="reset" value="Reset Form">
+        </p>
+    </form>
+    <script>
+        const diStop = (e) => {
+            e.preventDefault();
+        }
+        document.getElementById("formKu").addEventListener("submit", diStop);
+        document.getElementById("formKu").addEventListener("reset", diStop);
+    </script>
+</body>
+</html>

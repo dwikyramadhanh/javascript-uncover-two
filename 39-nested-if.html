@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested If</title>
+</head>
+<body>
+    <h1>Nested If</h1>
+    <script>
+        let foo = 12;
+        console.info(`Nilai foo = ${foo}`);
+        if (typeof foo === 'number') {
+            console.info('Foo bertipe number');
+            if (foo >= 10) {
+                console.info('Nilai foo lebih besar dari 10');
+            } else {
+                console.info('Nilai foo lebih kecil dari 10');
+            }
+        } else if (typeof foo === 'string') {
+            console.info('Foo bertipe string');
+        } else {
+            console.info('Foo bukan bertipe number dan string');
+        }
+
+        let bar = 7;
+        console.info(`Nilai bar = ${bar}`);
+        if ((typeof bar === 'number') && (bar >= 10)) {
+            console.info('Bar bertipe number dan nilai bar lebih dari 10');
+        } else if ((typeof bar === 'number') && (bar < 10)) {
+            console.info('Bar bertipe number dan nilai bari kurang dari 10');
+        } else if (typeof bar === 'string') {
+            console.info('Bar bertipe string');
+        } else {
+            console.info('Bar bukan bertipe number dan string');
+        }
+    </script>
+</body>
+</html>

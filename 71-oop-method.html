@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP Method</title>
+</head>
+<body>
+    <h1>OOP Method</h1>
+    <script>
+        // class Mobil {
+        //     constructor(nama, tipe, harga) {
+        //         this.nama = nama;
+        //         this.tipe = tipe;
+        //         this.harga = harga;
+        //     }
+        //     hidupkan() {
+        //         return 'mesin dihidupkan';
+        //     }
+        // }
+        // let mobilDwiky = new Mobil('daihatsu xenia', 'mpv', 150000000);
+        // console.info(mobilDwiky.nama);
+        // console.info(mobilDwiky.hidupkan());
+
+        // let mobilNadya = new Mobil('toyota camry', 'sedan', 250000000);
+        // console.info(mobilNadya.nama);
+        // console.info(mobilNadya.hidupkan());
+
+        // class Mobil {
+        //     constructor(nama, tipe, harga) {
+        //         this.nama = nama;
+        //         this.tipe = tipe;
+        //         this.harga = harga;
+        //     }
+        //     hidupkan() {
+        //         return `mesin ${this.nama} dihidupkan`;
+        //     }
+        // }
+
+        // let mobilDwiky = new Mobil('daihatsu xenia', 'mpv', 150000000);
+        // console.info(mobilDwiky.nama);
+        // console.info(mobilDwiky.hidupkan());
+
+        // let mobilNadya = new Mobil('toyota camry', 'sedan', 250000000);
+        // console.info(mobilNadya.nama);
+        // console.info(mobilNadya.hidupkan());
+
+        // class Mobil {
+        //     constructor(nama, tipe, harga) {
+        //         this.nama = nama;
+        //         this.tipe = tipe;
+        //         this.harga = harga;
+        //     }
+        //     hidupkan() {
+        //         return `Mesin ${this.nama} dihidupkan`;
+        //     }
+        //     pergi(tempat) {
+        //         return `Pergi ke ${tempat} dengan ${this.nama}`;
+        //     }
+        // }
+
+        // let mobilDwiky = new Mobil('daihatsu xenia', 'mpv', 150000000);
+        // console.info(mobilDwiky.nama);
+        // console.info(mobilDwiky.pergi('bandung'));
+
+        // let mobilNadya = new Mobil('toyota camry', 'sedan', 250000000);
+        // console.info(mobilNadya.nama);
+        // console.info(mobilNadya.pergi('jakarta'));
+
+        class Mobil {
+            constructor(nama, tipe, harga) {
+                this.nama = nama;
+                this.tipe = tipe;
+                this.harga = harga;
+                this.hidupkan = () => `Mesin ${this.nama} dihidupkan`;
+            }
+        }
+        let mobilDwiky = new Mobil('daihatsu xenia', 'mpv', 150000000);
+        console.info(mobilDwiky.hidupkan());
+    </script>
+</body>
+</html>

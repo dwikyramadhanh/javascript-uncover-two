@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Prototype Match</title>
+</head>
+<body>
+    <h1>Strong Prototype Match</h1>
+    <script>
+        let foo = 'Belajar JavaScript dari buku JavaScript Uncover';
+        console.info(foo.match('JavaScript'));
+        console.info(foo.match('a'));
+        console.info(foo.match('Tidak ada'));
+
+        // Match with regex
+        let bar = '1 jam sama dengan 60 menit. Juga sama dengan 3600 detik';
+        console.info(bar.match(/\d+/g));
+        console.info(bar.match(/\w*e\w*/g));
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Default</title>
+</head>
+<body>
+    <h1>Prevent Default</h1>
+    <a href="belajar_js.js">Belajar JavaScript</a>
+    <script>
+        document.querySelector('a').addEventListener('click', (e) => {
+            alert('Link di klik');
+            e.preventDefault();
+        });
+    </script>
+    <script></script>
+</body>
+</html>

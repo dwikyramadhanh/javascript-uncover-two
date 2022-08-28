@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Awal dan Akhir</title>
+</head>
+<body>
+    <h1>Regex Awal dan Akhir</h1>
+    <script>
+        let foo = 'Belajar JavaScript';
+        console.log( /JavaScript/.test(foo) ); // true
+        console.log( /^JavaScript/.test(foo) ); // false
+        console.log( /JavaScript$/.test(foo) ); // true
+        console.log( /^Belajar/.test(foo) ); // true
+        console.log( /^Belajar JavaScript$/.test(foo) ); // true
+        console.log( /Script$/.test(foo) ); // true  
+    </script>
+</body>
+</html>

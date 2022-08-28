@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Node Object Get Computed Style</title>
+    <style>
+        h2 {
+            color: green;
+            background-color: #cac8c3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Element Node Object Get Computed Style</h1>
+    <h2 id="judul">Belajar JavaScript</h2>
+    <script>
+        let judulNode = document.getElementById('judul');
+        let hasilStyle = getComputedStyle(judulNode, null);
+
+        console.info(hasilStyle);
+        console.info(hasilStyle.length);
+        console.info(hasilStyle[0]);
+        console.info(hasilStyle[1]);
+
+        console.info(hasilStyle.color);
+        console.info(hasilStyle.backgroundColor);
+        console.info(hasilStyle.height);
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div {
+            border: 3px solid black;
+            width: 500px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+    <title>Event Mousedown, Mouseup, Mouseover, dan Mouseout</title>
+</head>
+<body>
+    <h1>Event Mousedown, Mouseup, Mouseover, dan Mouseout</h1>
+    <div>Cursor mouse kesini</div>
+    <script>
+        const mouseoverEvent = (e) => {
+            e.target.style.backgroundColor = 'Lavender';
+            e.target.innerHTML = 'Terjadi event mouseover';
+        }
+        const mouseoutEvent = (e) => {
+            e.target.style.backgroundColor = 'Aquamarine';
+            e.target.innerHTML = 'Terjadi event mouseout';
+        }
+        const mousedownEvent = (e) => {
+            e.target.style.backgroundColor = 'Moccasin';
+            e.target.innerHTML = 'Terjadi event mousedown';
+        }
+        const mouseupEvent = (e) => {
+            e.target.style.backgroundColor = 'LightGreen';
+            e.target.innerHTML = 'Terjadi event mouseup';
+        }
+        let divNode = document.querySelector('div');
+        divNode.addEventListener('mouseover',mouseoverEvent);
+        divNode.addEventListener('mouseout', mouseoutEvent);
+        divNode.addEventListener('mousedown', mousedownEvent);
+        divNode.addEventListener('mouseup', mouseupEvent);
+    </script>
+</body>
+</html>

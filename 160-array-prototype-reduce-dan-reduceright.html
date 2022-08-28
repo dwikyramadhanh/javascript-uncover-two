@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Prototype reduce dan reduceRight</title>
+</head>
+<body>
+    <h1>Array Prototype reduce dan reduceRight</h1>
+    <script>
+        // const tambah = (total, angka) => total + angka;
+        // let foo = [5,7,14,12,16];
+        // console.info(foo.reduce(tambah));
+        // console.info(foo.reduce(tambah, 10));
+
+        // console.info(foo.reduceRight(tambah));
+        // console.info(foo.reduceRight(tambah, 10));
+
+        const pangkat2 = (total, angka) => total + Math.pow(angka, 2);
+        let foo = [5, 7, 14];
+        console.info(foo.reduce(pangkat2));
+        console.info(foo.reduce(pangkat2, 0));
+
+        console.info(foo.reduceRight(pangkat2))
+        console.info(foo.reduceRight(pangkat2, 0));
+
+        // Bagi
+        // const bagi = (total,angka) => total / angka;
+        // let foo = [49,7,2];
+        // console.log(foo.reduce(bagi)); // 3.5
+        // console.log(foo.reduceRight(bagi)); // 0.0058309037900874635
+    </script>
+</body>
+</html>

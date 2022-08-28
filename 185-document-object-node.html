@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Node</title>
+</head>
+<body>
+    <h1>Document Object Node</h1>
+    <p>Sedang belajar <em>JavaScript</em><b> dari Duniailkom</b></p>
+    <script>
+        let foo = document.childNodes[0];
+        console.info(foo.nodeName);
+        console.info(foo.nodeType);
+        console.info(foo.childNodes);
+        console.info(foo.childNodes.length);
+
+        let bar = document.childNodes[1];
+        console.info(bar.nodeName);
+        console.info(bar.nodeType);
+        console.info(bar.childNodes);
+        console.info(bar.childNodes.length);
+    </script>
+</body>
+</html>

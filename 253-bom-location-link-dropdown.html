@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Location Link Dropdown</title>
+</head>
+<body>
+    <h1>BOM Location Link Dropdown</h1>
+    <p>Pilih Website:
+        <select id="daftarWebsite">
+            <option value="google">Google</option>
+            <option value="facebook">Facebook</option>
+            <option value="twitter">Twitter</option>
+            <option value="duniailkom">Duniailkom</option>
+        </select>
+        <button id="tombol">Go</button>
+    </p>
+    <script>
+        let tombolNode = document.getElementById('tombol');
+        let daftarWebsite = document.getElementById('daftarWebsite');
+
+        const pilihanWebsite = () => {
+            let namaWebsite = daftarWebsite.value;
+            switch (namaWebsite) {
+                case ('google') :
+                location = 'https://www.google.com'; break;
+                case ('facebook') :
+                location = 'https://www.facebook.com'; break;
+                case ("twitter") :
+                location = 'https://www.twitter.com'; break;
+                case ('duniailkom') :
+                location = 'https://www.duniailkom.com'; break;
+            }
+        }
+        tombolNode.addEventListener('click', pilihanWebsite);
+    </script>
+</body>
+</html>

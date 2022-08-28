@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Function</title>
+</head>
+<body>
+    <h1>Constructor Function</h1>
+    <script>
+        function Mobil(nama, tipe, harga) {
+            this.nama = nama;
+            this.tipe = tipe;
+            this.harga = harga;
+            this.hidupkan = function() {
+                return 'mesin dinyalakan';
+            }
+            this.pergi = function(tempat) {
+                return `pergi ke ${tempat} dengan ${this.nama}`;
+            }
+        }
+
+        let mobilDwiky = new Mobil('toyota camry', 'sedan', 750000000);
+        let mobilAndi = new Mobil('daihatsu xenia', 'mpv', 220000000);
+
+        console.info(mobilDwiky.nama);
+        console.info(mobilAndi.nama);
+
+        console.info(mobilDwiky.hidupkan());
+        console.info(mobilAndi.hidupkan());
+
+        console.info(mobilDwiky.pergi('bandung'));
+        console.info(mobilAndi.pergi('jakarta'));
+
+        console.info(mobilDwiky instanceof Mobil);
+        console.info(mobilAndi instanceof Mobil);
+    </script>
+</body>
+</html>

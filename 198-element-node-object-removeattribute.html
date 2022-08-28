@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Node Object Remove Attribute</title>
+</head>
+<body>
+    <h1>Element Node Object Remove Attribute</h1>
+    <h2 id="judul" title="Sedang Belajar">Belajar JavaScript</h2>
+    <script>
+        let judulNode = document.getElementById('judul');
+        console.info(judulNode.getAttribute('id'));
+        console.info(judulNode.getAttribute('title'));
+        
+        judulNode.removeAttribute('id');
+        judulNode.removeAttribute('title');
+        
+        console.info(judulNode.getAttribute('id'));
+        console.info(judulNode.getAttribute('title'));
+    </script>
+</body>
+</html>

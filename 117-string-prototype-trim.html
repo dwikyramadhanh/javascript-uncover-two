@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Prototype Trim</title>
+</head>
+<body>
+    <h1>String Prototype Trim</h1>
+    <script>
+        let foo = '     JavaScript     ';
+        console.info(foo.length);
+        console.info(foo);
+
+        foo = foo.trim();
+        console.info(foo.length);
+        console.info(foo);
+
+        // CASE trim
+        let username = 'admin ';
+        if (username.trim() === 'admin') {
+            console.info('welcome, admin');
+        } else {
+            console.info('user tidak ditemukan');
+        }
+    </script>
+</body>
+</html>

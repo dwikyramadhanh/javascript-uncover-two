@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Instance Method To LocaleString</title>
+</head>
+<body>
+    <h1>Number Instance Method To LocaleString</h1>
+    <script>
+        let foo = 1234500.346;
+        console.info(foo.toString());
+        console.info(foo.toLocaleString());
+
+        
+        let bar = 1234500.346;
+        console.info(foo.toLocaleString('id-ID'));
+        console.info(foo.toLocaleString('en-GB'));
+        console.info(foo.toLocaleString('fr-FR'));
+        console.info(foo.toLocaleString('ar-SA'));
+    </script>
+</body>
+</html>

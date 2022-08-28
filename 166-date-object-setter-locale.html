@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Object Setter Locale</title>
+</head>
+<body>
+    <h1>Date Object Setter Locale</h1>
+    <script>
+        let foo = new Date(0);
+        console.log( foo.toLocaleString() );
+        foo.setFullYear(2022);
+        console.log( foo.toLocaleString() );
+        foo.setMonth(10);
+        console.log( foo.toLocaleString() );
+        foo.setDate(20);
+        console.log( foo.toLocaleString() );
+        foo.setHours(10);
+        console.log( foo.toLocaleString() );
+        foo.setMinutes(30);
+        console.log( foo.toLocaleString() );
+        foo.setSeconds(45);
+        console.log( foo.toLocaleString() );
+        foo.setMilliseconds(125);
+        console.log( foo.toISOString() );
+    </script>
+</body>
+</html>

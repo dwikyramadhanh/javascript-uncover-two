@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+<body>
+    <h1>Rest Parameter</h1>
+    <script>
+        // function angka(...arg) {
+        //     console.info(arg[0]);
+        //     console.info(arg[1]);
+        //     console.info(arg[2]);
+        //     console.info(arg[3]);
+        // }
+        // angka(4, 8, 3, 7);
+
+        // function angka(a, b, ...sisa) {
+        //     console.info(a);
+        //     console.info(b);
+        //     console.info(sisa);
+        // } 
+        // angka(3, 8, 3, 7);
+
+        // Rata-rata dengan rest parameter
+        function rata2(...semuaArg) {
+            let totalArg = semuaArg.length;
+            let hasil = 0;
+            for (let i of semuaArg) {
+                hasil += i;
+            }
+            return hasil / totalArg;
+        }
+        let a = rata2(1, 9);
+        console.log(a);
+        let b = rata2(4, 8, 3, 7);
+        console.log(b);
+        let c = rata2(14, 34, 17, 55, 98, 22, 26);
+        console.log(c);
+    </script>
+</body>
+</html>

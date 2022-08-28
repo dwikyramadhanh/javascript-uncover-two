@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler dari Property Element</title>
+</head>
+<body>
+    <h1>Event Handler dari Property Element</h1>
+    <h2 id="judul">Belajar JavaScript</h2>
+    <p></p>
+    <script>
+        // function tampilkan() {
+        //     document.querySelector('p').innerHTML = 'Judul di click';
+        // }
+        // let h1Node = document.getElementById('judul');
+        // h1Node.onclick = tampilkan;
+
+        // Dengan arrow notation
+        let h1Node = document.getElementById('judul');
+        h1Node.onclick = () => {
+            document.querySelector('p').innerHTML = 'Judul di click';
+        };
+        h1Node.ondblclick = () => {
+            document.querySelector('p').innerHTML = 'Judul di double click';
+        }
+        h1Node.oncontextmenu = () => {
+            document.querySelector('p').innerHTML = 'Judul di click kanan';
+        }
+    </script>
+</body>
+</html>

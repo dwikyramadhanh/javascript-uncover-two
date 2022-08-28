@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menjalankan Event Milik Element Lain Dua</title>
+</head>
+<body>
+    <p>Username: <input type="text" id="username"></p>
+    <p>Email: <input type="text" id="email"></p>
+    <p>Jalankan: <button id="focusU">Fokus ke Username</button>
+    <button id="focusE">Fokus ke Email</button></p>
+    <script>
+        let usernameNode = document.getElementById('username');
+        let emailNode = document.getElementById('email');
+
+        const diFocus = (e) => { e.target.style.backgroundColor = 'lightgray'; }
+        const diBlur = (e) => { e.target.style.backgroundColor = 'palegreen'; }
+
+        usernameNode.addEventListener('focus',diFocus);
+        emailNode.addEventListener('focus',diFocus);
+
+        usernameNode.addEventListener('blur',diBlur);
+        emailNode.addEventListener('blur',diBlur);
+        
+        let focusUNode = document.getElementById('focusU');
+        let focusENode = document.getElementById('focusE');
+        
+        focusUNode.addEventListener('click',function(){ usernameNode.focus(); });
+        focusENode.addEventListener('click',function(){ emailNode.focus(); });
+    </script>
+</body>
+</html>

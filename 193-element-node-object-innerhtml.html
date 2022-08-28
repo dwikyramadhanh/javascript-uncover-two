@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Node Object InnerHTML</title>
+</head>
+<body>
+    <h1>Element Node Object InnerHTML</h1>
+    <h2 id="judul">Belajar JavaScript</h2>
+    <p>Sedang belajar <em>JavaScript</em><b> dari Duniailkom</b></p>
+    <script>
+        // Read
+        // let judulNode = document.getElementById('judul');
+        // console.info(judulNode.innerHTML);
+
+        // let pNode = document.querySelector('p');
+        // console.info(pNode.innerHTML);
+
+        // Write
+        // let judulNode = document.getElementById('judul');
+        // judulNode.innerHTML = 'Belajar Document Object';
+
+        // let pNode = document.querySelector('p');
+        // pNode.innerHTML = 'Sedang Belajar <em>Element Object</em>';
+
+        // Case 
+        let listBaru = '<ol><li>HTML</li><li>CSS</li><li>JavaScript</li></ol>';
+        let bodyNode = document.querySelector('body');
+        bodyNode.innerHTML = bodyNode.innerHTML + listBaru;
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Synch Await</title>
+</head>
+<body>
+    <h1>Fetch Synch Await</h1>
+    <script>
+        const myFetch = async () => {
+            let response = await fetch('https://reqres.in/api/users/5');
+            let data = await response.json();
+            let user = data.data;
+
+            console.info(user.id);
+            console.info(user.first_name);
+            console.info(user.last_name);
+            console.info(user.email);
+            console.info(user.avatar);
+        }
+        myFetch();
+    </script>
+</body>
+</html>

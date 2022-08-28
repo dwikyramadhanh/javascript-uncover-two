@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Location Link Dropdown Refactor</title>
+</head>
+<body>
+    <h1>BOM Location Link Dropdown Refactor</h1>
+    <select id="daftarWebsite">
+        <option value="" selected>-- Daftar Link --</option>
+        <option value="google">Google</option>
+        <option value="facebook">Facebook</option>
+        <option value="twitter">Twitter</option>
+        <option value="duniailkom">Duniailkom</option>
+    </select>
+    <script>
+        let daftarWebsite = document.getElementById('daftarWebsite');
+        const pilihanWebsite = () => {
+            location = `https://www.${daftarWebsite.value}.com`;
+        }
+        daftarWebsite.addEventListener('change', pilihanWebsite);
+    </script>
+</body>
+</html>

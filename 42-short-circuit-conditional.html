@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Circuit Conditional</title>
+</head>
+<body>
+    <h1>Short Circuit Conditional</h1>
+    <script>
+        let user;
+        user = 'dwiky';
+        (user === 'admin') && console.info('Welcome admin');
+        user = 'admin';
+        (user === "admin") ? console.log('Wecome admin') : '';
+        (user === 'admin') && console.info('Wecome admin');
+
+        let username = 'admin';
+        let password = 'qwerty';
+
+        (user === 'admin') && (password === '12345') && console.info('Welcome admin');
+        (user === 'admin') && (password === 'qwerty') && console.info('Welcome admin');
+        
+    </script>
+</body>
+</html>

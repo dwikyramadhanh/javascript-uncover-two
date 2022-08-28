@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            border: 1px solid black;
+        } 
+        td {
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+    </style>
+    <title>Event Object Latihan</title>
+</head>
+<body>
+    <h1>Event Object Latihan</h1>
+    <table class="table">
+        <tr>
+            <td>red</td>
+            <td>blue</td>
+            <td>green</td>
+        </tr>
+    </table>
+    <script>
+        const ubahWarna = (e) => {
+            e.target.style.backgroundColor= e.target.innerHTML;
+        } 
+        document.querySelector('table').addEventListener('click', ubahWarna);
+    </script>
+</body>
+</html>

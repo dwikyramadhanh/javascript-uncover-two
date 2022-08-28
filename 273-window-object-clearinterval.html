@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object ClearInterval</title>
+</head>
+<body>
+    <h1>Window Object ClearInterval</h1>
+    <h2>Belajar JavaScript</h2>
+    <button id="stop">Stop Animasi</button>
+    <script>
+        let h2Node = document.querySelector('h2');
+        let stopNode = document.getElementById('stop');
+        
+        const buatEfek = () => {
+            if (h2Node.style.color === 'red'){
+                h2Node.style.color = 'blue';
+            }
+            else {
+                h2Node.style.color = 'red';
+            }
+        }
+
+        let setIntervalID = setInterval(buatEfek,200);
+        stopNode.addEventListener('click', () => {
+            clearInterval(setIntervalID);
+        });
+    </script>
+</body>
+</html>

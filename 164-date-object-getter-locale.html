@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Object Getter Locale</title>
+</head>
+<body>
+    <h1>Date Object Getter Locale</h1>
+    <script>
+        let foo = new Date();
+        console.log( foo.toLocaleDateString() );
+        console.log( foo.toLocaleTimeString() );
+        console.log( foo.toLocaleString() );
+        console.log( foo.toDateString() );
+        console.log( foo.toTimeString() );
+        console.log( foo.toString() );
+
+        let bar = new Date();
+        console.log( bar.getFullYear() );
+        console.log( bar.getMonth() );
+        console.log( bar.getDate() );
+        console.log( bar.getDay());
+        console.log( bar.getHours());
+        console.log( bar.getMinutes() );
+        console.log( bar.getSeconds() );
+        console.log( bar.getMilliseconds());
+        console.log( bar.getTimezoneOffset() );
+    </script>
+</body>
+</html>

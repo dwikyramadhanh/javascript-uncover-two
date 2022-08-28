@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Argument</title>
+</head>
+<body>
+    <h1>Function Argument</h1>
+    <script>
+        // function angka() {
+        //     console.info(arguments[0]);
+        //     console.info(arguments[1]);
+        //     console.info(arguments[2]);
+        //     console.info(arguments[3]);
+        // }
+        // angka(2, 3, 4, 5);
+
+        // Function arguments length
+        // function angka() {
+        //     return arguments.length;
+        // }
+        // let a = angka(1, 2);
+        // console.info(a);
+
+        // let b = angka(1, 2, 3, 4, 5);
+        // console.info(b);
+
+        // let c = angka(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 , 13, 14, 15);
+        // console.info(c);
+
+        // Function arguments rata-rata
+        function rata2() {
+            let totalArg = arguments.length;
+            let hasil = 0;
+            for (let i = 0; i < totalArg; i ++) {
+                hasil = hasil + arguments[i];
+            }
+            return hasil / totalArg;
+        }
+        let a = rata2(1, 9);
+        console.info(a);
+
+        let b = rata2(4, 8, 3, 7);
+        console.log(b);
+        
+        let c = rata2(14, 34, 17, 55, 98, 22, 26);
+        console.log(c);
+    </script>
+</body>
+</html>

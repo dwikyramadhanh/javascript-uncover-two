@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Static Method Min dan Max</title>
+</head>
+<body>
+    <h1>Math Static Method Min dan Max</h1>
+    <script>
+        let foo = Math.max(45, 90, 12, 55, 19, 75);
+        console.info(foo); // 90
+
+        let bar = Math.min(45, 90, 12, 55, 19, 75);
+        console.info(bar); // 12
+
+        let baz = [45, 90, 12, 55, 19, 75];
+        console.info(Math.max(...baz));
+        console.info(Math.min(...baz));
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Processing HTMLInputElement Property</title>
+</head>
+<body>
+    <h1>Form Processing HTMLInputElement Property</h1>
+    <form id="formKu" name="formKu" method="get" action="proses.php">
+        <p>Username: <input type="text" name="username" id="username"></p>
+        <p><input type="submit" name="submit" id="submit" value="Submit Form"></p>
+    </form>
+    <script>
+        let formNode = document.getElementById('formKu');
+        let usernameNode = document.getElementById('username');
+        const diProses = (e) => {
+            e.preventDefault();
+            console.info(usernameNode.form); 
+            console.info(usernameNode.name);
+            console.info(usernameNode.type);
+            console.info(usernameNode.autofocus);
+            console.info(usernameNode.value);
+            console.info(usernameNode.maxLength);
+            console.info(usernameNode.size);
+            console.info(usernameNode.readOnly);
+            console.info(usernameNode.placeholder);
+        }
+        formNode.addEventListener('click', diProses);
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Prototype Find dan FindIndex</title>
+</head>
+<body>
+    <h1>Array Prototype Find dan FindIndex</h1>
+    <script>
+        // const ganjilGenap = (element) => element %2 === 0 ? true : false;
+        // let foo = [5,7,14,12,16];
+        // console.info(foo.find(ganjilGenap));
+        // console.info(foo.findIndex(ganjilGenap));
+
+        // let bar = [99,75,17,29,88];
+        // console.log(bar.find(ganjilGenap));
+        // console.log(bar.findIndex(ganjilGenap));
+
+        const lebih10 = (element) => element >= 10 ? true: false;
+        let foo = [15,7,14,12,16];
+        console.log(foo.find(besarDari10));
+        console.log(foo.findIndex(besarDari10));
+
+        let bar = [9,75,17,29,88];
+        console.log(bar.find(besarDari10));
+        console.log(bar.findIndex(besarDari10));
+        
+        let baz = [9,3,4,5,6];
+        console.log(baz.find(besarDari10));
+        console.log(baz.findIndex(besarDari10));
+    </script>
+</body>
+</html>

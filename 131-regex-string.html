@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex String</title>
+</head>
+<body>
+    <h1>Regex String</h1>
+    <script>
+        let foo = "Belajar JavaScript";
+        console.info( /JavaScript/.test(foo) ); // true
+        console.info( /Javascript/.test(foo) ); // false
+        console.info( /Belajar/.test(foo) ); // true
+        console.info( /belajar/.test(foo) ); // false
+        console.info( /Java/.test(foo) ); // true
+        console.info( /ajar/.test(foo) ); // true
+    </script>
+</body>
+</html>

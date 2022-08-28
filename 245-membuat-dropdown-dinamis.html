@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Dropdown Dinamis</title>
+</head>
+<body>
+    <h1>Membuat Dropdown Dinamis</h1>
+    <p>
+        <select name="fakultas" id="fakultas">
+            <option value="FASILKOM">FASILKOM</option>
+            <option value="Ekonomi">Ekonomi</option>
+            <option value="FMIPA">FMIPA</option>
+        </select>
+        Jurusan: 
+        <select name="jurusan" id="jurusan"></select>
+    </p>
+    <br><br>
+    <p>Pilihan Anda: <span id="hasil"></span></p>
+    <script>
+        let fakultasNode = document.getElementById('fakultas');
+        let jurusanNode = document.getElementById('jurusan');
+        let hasilNode = document.getElementById('hasil');
+
+        let jurFASILKOM = "";
+        let jurEkonomi = "";
+        let jurFMIPA = "";
+        
+        function tampilkanJurusan() {
+            if (fakultasNode.value === 'FASILKOM') {
+                jurFASILKOM = "<option value='Ilkom'>Ilmu Komputer</option>";
+                jurFASILKOM += "<option value='TI'>Teknik Informatika</option>";
+                jurFASILKOM += "<option value='SI'>Sistem Informasi</option>";
+                jurusanNode.innerHTML = jurFASILKOM;
+            }
+            if (fakultasNode.value === "Ekonomi"){
+                jurEkonomi = "<option value='Akuntansi'>Akuntansi</option>";
+                jurEkonomi += "<option value='Manajemen'>Manajemen</option>";
+                jurEkonomi += "<option value='Ilmu Ekonomi'>Ilmu Ekonomi</option>";
+                jurusanNode.innerHTML = jurEkonomi;
+            }
+            if (fakultasNode.value === "FMIPA"){
+                jurFMIPA = "<option value='Matematika'>Matematika</option>";
+                jurFMIPA += "<option value='Fisika'>Fisika</option>";
+                jurFMIPA += "<option value='Kimia'>Kimia</option>";
+                jurFMIPA += "<option value='Biologi'>Biologi</option>";
+                jurusanNode.innerHTML = jurFMIPA;
+            }
+            tampilkanHasil();
+        }
+
+        function tampilkanHasil(){
+            hasilNode.innerHTML = 'Fakultas ' + fakultasNode.value + ', ';
+            hasilNode.innerHTML += 'Jurusan ' + jurusanNode.value;
+        }
+
+        window.addEventListener('load', tampilkanJurusan);
+        fakultasNode.addEventListener('change',tampilkanJurusan);
+        jurusanNode.addEventListener('change',tampilkanHasil);
+    </script>
+</body>
+</html>

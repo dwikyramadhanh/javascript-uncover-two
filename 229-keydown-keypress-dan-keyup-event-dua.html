@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #hasil {
+            width: 300px;
+            height: 50px;
+            border: 2px solid black;
+        }
+    </style>
+    <title>Keydown, Keypress, dan Keyup Event Dua</title>
+</head>
+<body>
+    <h1>Keydown, Keypress, dan Keyup Event Dua</h1>
+    <p>Ketik disini: <input type="text" id="ketik"></p>
+    <p>Hasil keydown: <span id="hasilKeydown"></span></p>
+    <p>Hasil keypress: <span id="hasilKeypress"></span></p>
+    <p>HasilKeyUpNode: <span id="hasilKeyUp"></span></p>
+    <script>
+        let ketikNode = document.getElementById('ketik');
+        let hasilKeydownNode = document.getElementById('asilKeydown');
+        let hasilKeyPressNode = document.getElementById('hasilKeypress');
+        let hasilKeyUpNode = document.getElementById('hasilKeyUp');
+
+        const diKeydown = () => { hasilKeydownNode.innerHTML = ketikNode.value; }
+        const diKeypress = () => { hasilKeyPressNode.innerHTML = ketikNode.value; }
+        const diKeyup = () => { hasilKeyUpNode.innerHTML = ketikNode.value; }
+        
+        ketikNode.addEventListener('keydown', diKeydown);
+        ketikNode.addEventListener('keypress', diKeypress);
+        ketikNode.addEventListener('keyup', diKeyup);
+    </script>
+</body>
+</html>

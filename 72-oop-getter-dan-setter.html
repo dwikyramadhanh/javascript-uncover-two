@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP Getter dan Setter</title>
+</head>
+<body>
+    <h1>OOP Getter dan Setter</h1>
+    <script>
+        class Mobil {
+            constructor(nama, tipe, harga) {
+                this.nama = nama;
+                this.tipe = tipe;
+                this.harga = harga;
+            }
+            get namaMobil() {
+                return this.nama;
+            }
+            set namaMobil(x) {
+                this.nama = x;
+            }
+        }
+        let mobilDwiky = new Mobil('mitsubishi pajero sport');
+        console.info(mobilDwiky.namaMobil);
+
+        mobilDwiky.namaMobil = 'toyota fortuner';
+        console.log(mobilDwiky.namaMobil);
+
+        mobilDwiky.namaMobil('toyota rush'); // mobilDwiky.namaMobil is not a function
+    </script>
+</body>
+</html>

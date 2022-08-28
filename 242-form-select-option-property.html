@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Select Option Property</title>
+</head>
+<body>
+    <h1>Form Select Option Property</h1>
+    <p>Belajar:
+        <select name="belajar" id="belajar">
+        <option value="HTML" id="belajarHTML">Belajar HTML</option>
+        <option value="CSS" id="belajarCSS" selected>Belajar CSS</option>
+        <option value="JavaScript" id="belajarJS">Belajar JavaScript</option>
+        </select>
+    </p>
+    <p><button id="periksa">Periksa</button></p>
+    <script>
+        let belajarCSSNode = document.getElementById('belajarCSS');
+        let periksaNode = document.getElementById('periksa');
+        const diPeriksa = () => {
+        console.info(belajarCSSNode);
+        console.info(belajarCSSNode.value);
+        console.info(belajarCSSNode.index);
+        console.info(belajarCSSNode.text);
+        console.info(belajarCSSNode.selected);
+        console.info(belajarCSSNode.defaultSelected);
+        console.info(belajarCSSNode.disabled);
+        }
+        periksaNode.addEventListener('click', diPeriksa);
+    </script>
+</body>
+</html>

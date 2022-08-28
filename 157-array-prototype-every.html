@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Prototype Every</title>
+</head>
+<body>
+    <h1>Array Prototype Every</h1>
+    <script>
+        // const ganjilGenap = (element) => {
+        //     if (element % 2 === 0) {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
+
+        // let foo = [6,8,10,12,16];
+        // console.info(foo.every(ganjilGenap));
+
+        // let bar = [3,8,10,12,16];
+        // console.info(bar.every(ganjilGenap));
+
+        let ganjilGenap = (element) => element %2 === 0 ? true : false; 
+        let foo = [6,8,10,12,16];
+        console.log(foo.every(ganjilGenap));
+        
+        let bar = [3,8,10,12,16];
+        console.log(bar.every(ganjilGenap));
+
+        // Latihan 
+        // const lebih10 = (element) => element >= 10 ? true : false;
+        // let foo = [23,60,44,12,34];
+        // console.info(foo.every(lebih10));
+
+        // let bar = [2,60,44,12,34];
+        // console.log(bar.every(lebih10));
+    </script>
+</body>
+</html>

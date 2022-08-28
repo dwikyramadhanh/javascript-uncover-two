@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance Class Method Super</title>
+</head>
+<body>
+    <h1>Inheritance Class Method Super</h1>
+    <script>
+        class Mobil {
+            infoMobil() {
+                return 'dari class mobil';
+            }
+        }
+        class Bus extends Mobil {
+            infoBus() {
+                return 'ini dari class bus dan juga ' + super.infoMobil(); 
+            }
+        }
+        let busDwiky = new Bus();
+        console.info(busDwiky.infoBus());
+    </script>
+</body>
+</html>

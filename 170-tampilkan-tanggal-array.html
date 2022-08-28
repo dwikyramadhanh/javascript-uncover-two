@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tampilkan Tanggal Array</title>
+</head>
+<body>
+    <h1>Tampilkan Tanggal Array</h1>
+    <script>
+        let foo = new Date();
+        let tahun = foo.getFullYear();
+        let bulan = foo.getMonth();
+        let tanggal = foo.getDate();
+        let hari = foo.getDay();
+        let jam = foo.getHours();
+        let menit = foo.getMinutes();
+        let detik = foo.getSeconds();
+        let arrayHari = [
+        "Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"
+        ];
+        let arrayBulan = [
+        "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli",
+        "Agustus", "September", "Oktober", "November", "Desember"
+        ];
+        let tampilanTanggal = arrayHari[hari]+", "+tanggal+" "+arrayBulan[bulan]+" "+tahun+" "+jam+":"+menit+":"+ detik;
+        console.log(tampilanTanggal);
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Object</title>
+</head>
+<body>
+    <h1>Prototype Object</h1>
+    <script>
+        function Mobil(nama, tipe, harga) {
+            this.nama = nama;
+            this.tipe = tipe;
+            this.harga = harga;
+        }
+        Mobil.prototype.jumlahRoda = 4;
+        Mobil.prototype.pergi = function(tempat) {
+            return `pergi ke ${tempat} dengan ${this.nama}`;
+        }
+
+        let mobilDwiky = new Mobil('daihatsu xenia', 'mpv', 220000000);
+        let mobilNadya = new Mobil('toyota camry', 'sedan', 750000000);
+
+        console.info(mobilDwiky.jumlahRoda); 
+        console.info(mobilNadya.jumlahRoda);
+
+        console.info(mobilDwiky.pergi('bandung'));
+        console.info(mobilNadya.pergi('jakarta'));
+    </script>
+</body>
+</html>

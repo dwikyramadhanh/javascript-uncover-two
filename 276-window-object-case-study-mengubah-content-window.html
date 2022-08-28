@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object Case Study Mengubah Content Window</title>
+</head>
+<body>
+    <h1>Window Object Case Study Mengubah Content Window</h1>
+    <button id="tombolBuka">Buat jendela</button>
+    <button id="tombolEdit">Edit jendela</button>
+    <button id="tombolTutup">Tutup jendela</button>
+    <script>
+        let tombolBukaNode = document.getElementById('tombolBuka');
+        let tombolEditNode = document.getElementById('tombolEdit');
+        let tombolTutupNode = document.getElementById('tombolTutup');
+        let myJendela;
+        const jendelaBaru = () => {
+        let setting = 'width=900,height=300,toolbar=yes';
+            myJendela = open('https://www.google.com','jendelaBaru',setting);
+        }
+        const editJendela = () => {
+            myJendela.location = 'https://developer.mozilla.org';
+        }
+        const tutupJendela = () => {
+            myJendela.close();
+        }
+        tombolBukaNode.addEventListener('click', jendelaBaru);
+        tombolEditNode.addEventListener('click', editJendela);
+        tombolTutupNode.addEventListener('click', tutupJendela);
+    </script>
+</body>
+</html>

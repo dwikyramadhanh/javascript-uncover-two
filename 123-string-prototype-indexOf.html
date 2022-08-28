@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Prototype indexOf</title>
+</head>
+<body>
+    <h1>String Prototype indexOf</h1>
+    <script>
+        let foo = 'Belajar JavaScript dari buku JavaScript Uncover';
+        console.info(foo.indexOf('JavaScript'));
+        console.info(foo.indexOf('buku'));
+        console.info(foo.indexOf('Buku'));
+
+        let bar = 'Belajar JavaScript dari buku JavaScript Uncover';
+        console.info(foo.indexOf('JavaScript'));
+        console.info(foo.indexOf('JavaScript', 9));
+        console.info(foo.indexOf('JavaScript', 30));
+
+        // case IndexOf
+        let baz = 'Belajar JavaScript dari buku JavaScript Uncover';
+        let count = 0;
+        let posisi = foo.indexOf('a');
+
+        while(posisi !== -1) {
+            count++;
+            posisi = foo.indexOf('a', posisi+1);
+        }
+        console.info(count);
+    </script>
+</body>
+</html>

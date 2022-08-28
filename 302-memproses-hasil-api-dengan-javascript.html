@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memproses Hasil API dengan JavaScript</title>
+</head>
+<body>
+    <h1>Memproses Hasil API dengan JavaScript</h1>
+    <div id="container"></div>
+    <script>
+        const myFetch = async () => {
+            try {
+                let response = await fetch('https://reqres.in/api/users/5');
+                if (!response.ok) {
+                    throw new Error(`Terjadi gangguan dengan kode: ${response.status}`);
+                }
+                let data = await response.json();
+                let user = data.data;
+
+                let displayUser = ``;
+                // displayUser += `<ul>`;
+                // displayUser += `<li>${user.id}</li>`;
+                // displayUser += `<li>${user.first_name}</li>`;
+                // displayUser += `<li>${user.last_name}</li>`;
+                // displayUser += `<li>${user.email}</li>`;
+                // displayUser += `<li>${user.avatar}</li>`;
+                // displayUser += `</ul>`;
+
+                displayUser += `<div>`;
+                displayUser += `<h1>${user.first_name} ${user.last_name}</h1>`;
+                displayUser += `<figure>`;
+                displayUser += `<img src='${user.avatar}' alt='${user.first_name}' />`;
+                displayUser += `<figcaption>${user.email}</figcaption>`;
+                displayUser += `</figure>`;
+                displayUser += `</div>`;
+                document.getElementById('container').innerHTML = displayUser;
+            } catch (error) {
+                console.info(error);
+            }
+        }
+        myFetch();
+    </script>
+</body>
+</html>

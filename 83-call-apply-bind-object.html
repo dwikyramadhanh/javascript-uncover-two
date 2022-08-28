@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call, Apply, Bind Object</title>
+</head>
+<body>
+    <h1>Call, Apply, Bind Object</h1>
+    <script>
+        let mobilDwiky = {
+            nama: 'suzuki ertiga',
+            tipe: 'mpv',
+            cekData(warna, tahun) {
+                return `Mobil ${this.nama} ${warna} bertipe ${this.tipe} tahun ${tahun}`;
+            }
+        }
+
+        let mobilNadya = {
+            nama: 'toyota rush',
+            tipe: 'suv',
+        }
+
+        console.info(mobilDwiky.cekData('merah', 2012));
+        console.info(mobilDwiky.cekData.call(mobilNadya,'hitam',2010));
+        console.info(mobilDwiky.cekData.apply(mobilNadya,['putih', 2015]));
+
+        let dataMobilNadya = mobilDwiky.cekData.bind(mobilNadya,'silver',2022);
+        console.info(dataMobilNadya());
+    </script>
+</body>
+</html>

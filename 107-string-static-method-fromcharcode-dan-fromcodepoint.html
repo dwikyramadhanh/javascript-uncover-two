@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Static Method fromCharCode dan fromCodePoint</title>
+</head>
+<body>
+    <h1>String Static Method fromCharCode dan fromCodePoint</h1>
+    <script>
+        console.info(String.fromCharCode(65)); // A
+        console.info(String.fromCharCode(65, 66, 67)); // ABC
+
+        console.log(String.fromCodePoint(0x2615, 0x2744, 0x2F40));
+        console.log(String.fromCodePoint(9749, 10052, 12096));
+        // karakter Unicode baru, bisa ditampilkan
+        console.log(String.fromCodePoint(128656, 128663, 128690));
+    </script>
+</body>
+</html>

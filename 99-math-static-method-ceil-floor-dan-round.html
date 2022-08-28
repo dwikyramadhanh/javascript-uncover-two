@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Static Method Ceil, Floor, dan Round</title>
+</head>
+<body>
+    <h1>Math Static Method Ceil, Floor, dan Round</h1>
+    <script>
+        let foo = 12.5;
+
+        // floor = membulatkan ke bawah 
+        // ceil  = memulatkan ke atas
+        // round = membulatkan ke atas (di atas 0.5) atau ke bawah (di bawah 0.5)
+
+        console.info(Math.floor(foo)); 
+        console.info(Math.ceil(foo));
+        console.info(Math.round(foo));
+
+        let bar = 12.4;
+        console.info(Math.floor(bar));
+        console.info(Math.ceil(bar));
+        console.info(Math.round(bar));
+
+        console.info('===============');
+        let baz = 12.1354;
+
+        console.info(Math.floor(baz));
+        console.info(Math.ceil(baz));
+        console.info(Math.round(baz));
+
+        console.info(Math.floor(baz*1000) / 1000);
+        console.info(Math.ceil(baz*1000) / 1000);
+        console.info(Math.round(baz*1000) / 1000);
+    </script>
+</body>
+</html>

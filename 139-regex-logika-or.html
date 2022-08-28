@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Logika Or</title>
+</head>
+<body>
+    <h1>Regex Logika Or</h1>
+    <script>
+        // let pola = /aku|dia|kami/;
+        // console.log( pola.test('aku di sini') );
+        // console.log( pola.test('dia di sana') );
+        // console.log( pola.test('kami belajar JavaScript') );
+        // console.log( pola.test('belajar JavaScript dengan dia') );
+        
+        // Pola nomor kendaraan
+        let pola = /^[A-Za-z]{1,2}\s*\d{1,4}\s*[A-Za-z]{1,3}$/;
+        console.log( pola.test("B 1 RI") );
+        console.log( pola.test("B1RI") );
+        console.log( pola.test("DA 9999 XYZ ") );
+        console.log( pola.test("DA 9999 XYZ") );
+        console.log( pola.test("bk9he") );
+        console.log( pola.test("zz 9YES") );
+        console.log( pola.test("_zz9YES") );
+    </script>
+</body>
+</html>
